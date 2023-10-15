@@ -12,14 +12,10 @@ import React from 'react';
 function App() {
 
   const museiTitle = "Зоологический музей";
-  const draggable = true;
   const hfov = 110;
-  const compass = true;
-  const path = "/assets/"  
   const data = {
     "coridor1": {
       "title": "Коридор",
-      "hfov": hfov,
       "pitch": -3,
       "yaw": 0,
       "type": "equirectangular",
@@ -37,7 +33,6 @@ function App() {
 
     "musei1": {
       "title": "Музей",
-      "hfov": hfov,
       "pitch": -10,
       "yaw": -110,
       "type": "equirectangular",
@@ -62,7 +57,6 @@ function App() {
     },
     "musei2": {
       "title": "Музей",
-      "hfov": hfov,
       "pitch": -10,
       "yaw": -110,
       "type": "equirectangular",
@@ -87,7 +81,6 @@ function App() {
     },
     "musei3": {
       "title": "Музей",
-      "hfov": hfov,
       "pitch": -10,
       "yaw": -110,
       "type": "equirectangular",
@@ -112,7 +105,6 @@ function App() {
     },
     "musei4": {
       "title": "Музей",
-      "hfov": hfov,
       "pitch": -10,
       "yaw": -110,
       "type": "equirectangular",
@@ -137,7 +129,6 @@ function App() {
     },
     "musei5": {
       "title": "Музей",
-      "hfov": hfov,
       "pitch": -3,
       "yaw": 180,
       "type": "equirectangular",
@@ -177,7 +168,7 @@ function App() {
         autoLoad
 
         title={current_data.title}
-        hfov={current_data.hfov}
+        hfov={hfov}
         pitch={current_data.pitch}
         yaw={current_data.yaw}
         type={current_data.type}
@@ -196,7 +187,7 @@ function App() {
             handleClick={() => changeScene(hotspot.sceneId, hotspot.targetYaw)}
           />
         ))}
-        
+
       </Pannellum>
     </div>
   );

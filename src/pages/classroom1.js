@@ -18,14 +18,10 @@ import classroom_8_1 from '../assets/images/classroom_8_1.jpg';
 function ClassRoom_1() {
 
   const classroomTitle = "ClassRoom_1";
-  const draggable = true;
   const hfov = 110;
-  const compass = true;
-  const path = "../assets/images/"  
   const data = {
     "classroom_2_1": {
       "title": "Фото класса",
-      "hfov": hfov,
       "pitch": -3,
       "yaw": 0,
       "type": "equirectangular",
@@ -44,7 +40,7 @@ function ClassRoom_1() {
 
     "classroom_3_1": {
       "title": "Фото класса",
-      "hfov": hfov,
+      
       "pitch": -10,
       "yaw": -110,
       "type": "equirectangular",
@@ -69,7 +65,7 @@ function ClassRoom_1() {
     },
     "classroom_4_1": {
       "title": "Фото класса",
-      "hfov": hfov,
+      
       "pitch": -10,
       "yaw": -110,
       "type": "equirectangular",
@@ -94,7 +90,7 @@ function ClassRoom_1() {
     },
     "classroom_5_1": {
       "title": "Фото класса",
-      "hfov": hfov,
+      
       "pitch": -10,
       "yaw": -110,
       "type": "equirectangular",
@@ -119,7 +115,7 @@ function ClassRoom_1() {
     },
     "classroom_6_1": {
       "title": "Фото класса",
-      "hfov": hfov,
+      
       "pitch": -10,
       "yaw": -110,
       "type": "equirectangular",
@@ -144,7 +140,7 @@ function ClassRoom_1() {
     },
     "classroom_7_1": {
       "title": "Фото класса",
-      "hfov": hfov,
+      
       "pitch": -3,
       "yaw": 180,
       "type": "equirectangular",
@@ -170,7 +166,7 @@ function ClassRoom_1() {
     },
     "classroom_8_1": {
         "title": "Фото класса",
-        "hfov": hfov,
+        
         "pitch": -3,
         "yaw": 180,
         "type": "equirectangular",

@@ -1,0 +1,15 @@
+.hoverContainer {
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid black;
+    position: relative;
+    .hoverMenu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .hoverMenuItem {
+            padding: 2px 5px;
+            border-bottom: 1px solid black;
+        }
+    }
+}

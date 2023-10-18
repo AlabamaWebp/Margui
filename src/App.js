@@ -23,6 +23,7 @@ function App() {
         cabinet = {cabinet}
         setСabinet = {setСabinet}
         ></Header1>
+        {/* <hoverContainer/> */}
         {/* <Navigator /> */}
         <Routes>
           <Route path='/museum' element={<Museum />} />

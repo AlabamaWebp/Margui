@@ -1,5 +1,5 @@
 // import { Route, Routes } from 'react-router-dom';
-import { Pannellum } from "pannellum-react";
+// import { Pannellum } from "pannellum-react";
 import '../App.css';
 import React from 'react';
 
@@ -171,7 +171,7 @@ function Museum() {
     return(
         <>
         <div className="Museum">
-            <Pannellum
+            {/* <Pannellum
             hotspotDebug
             autoLoad
 
@@ -195,7 +195,7 @@ function Museum() {
             />
         ))}
             
-            </Pannellum>
+            </Pannellum> */}
         </div>
         </>
     )

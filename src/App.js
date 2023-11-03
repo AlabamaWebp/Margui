@@ -1,5 +1,5 @@
-import { Route, Routes } from 'react-router-dom';
-import { Pannellum } from "pannellum-react";
+import { Route, Switch } from 'react-router-dom';
+// import { Pannellum } from "pannellum-react";
 // import './App.css';
 import React, { useState } from 'react';
 
@@ -25,12 +25,12 @@ function App() {
         ></Header1>
         {/* <hoverContainer/> */}
         {/* <Navigator /> */}
-        <Routes>
+        <Switch>
           <Route path='/museum' element={<Museum />} />
           <Route path='/classroom_1' element={<Classroom_1 />} />
           <Route path='/classroom_2' element={<Classroom_2 />} />
           <Route path='*' element={<NotPage />} />
-        </Routes>
+        </Switch>
       </div>
     </>
   );

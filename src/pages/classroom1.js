@@ -1,5 +1,5 @@
 // import { Route, Routes } from 'react-router-dom';
-import { Pannellum } from "pannellum-react";
+// import { Pannellum } from "pannellum-react";
 import '../App.css';
 import React from 'react';
 
@@ -196,7 +196,8 @@ function ClassRoom_1() {
     return(
         <>
         <div className="classRoom">
-            <Pannellum
+          <div className='redBox'></div>
+            {/* <Pannellum
             hotspotDebug
             autoLoad
 
@@ -220,7 +221,7 @@ function ClassRoom_1() {
             />
         ))}
             
-            </Pannellum>
+            </Pannellum> */}
         </div>
         </>
     )

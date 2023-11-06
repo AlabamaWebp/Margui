@@ -9,10 +9,10 @@ const Header = (
         setСabinet, }
 ) => {
     const [value1, setValue1] = useState("1");
-    const [value2, setValue2] = useState();
-    const [value3, setValue3] = useState();
+    const [value2, setValue2] = useState("1");
+    const [value3, setValue3] = useState("1");
     let hover = [{
-        name: "Этаж",
+        name: "Корпус",
         items: ["1", "2", "3"],
         text: value1,
         change: (value) => {
@@ -22,30 +22,32 @@ const Header = (
     {
         name: "Этаж",
         items: ["1", "2", "3"],
-        text: value1,
+        text: value2,
         change: (value) => {
-            setValue1(value);
+            setValue2(value);
         }
     },
     {
-        name: "Этаж",
+        name: "Кабинет",
         items: ["1", "2", "3"],
-        text: value1,
+        text: value3,
         change: (value) => {
-            setValue1(value);
+            setValue3(value);
         }
     },
     ]
     return (
         <header className='mainHeader'>
             {hover.map((item, index) =>
-                <HoverContainer
-                    key={index}
-                    text={item.text}
-                    items={item.items}
-                    onChange={item.change}
-                // vars={item}
-                />
+                <div key={index} className='hover'>
+                    <span className='name'>{item.name}</span>
+                    <HoverContainer
+                        text={item.text}
+                        items={item.items}
+                        onChange={item.change}
+                    // vars={item}
+                    />
+                </div>
             )}
         </header>
     )

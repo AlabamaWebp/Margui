@@ -2,6 +2,16 @@
     height: 60px;
     width: 100%;
     display: flex;
-    padding: 5px;
+    padding: 5px 15px;
     justify-content: space-between;
+}
+.hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .name {
+        margin: 0 10px 0 0;
+        font-size: 24px;
+        font-weight: bold;
+    }
 }

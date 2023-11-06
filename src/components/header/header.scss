@@ -1,9 +1,13 @@
+@import "../../style/vars.scss";
 .mainHeader {
-    height: 60px;
+    height: 80px;
     width: 100%;
     display: flex;
     padding: 5px 15px;
     justify-content: space-between;
+    // border-bottom: 2px dotted black;
+    background-color: $main;
+    color: white;
 }
 .hover {
     display: flex;

@@ -10,23 +10,32 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-html, body, #root, .wrapper {
+
+html,
+body,
+#root,
+.wrapper {
   height: 100%;
 }
+
 * {
   box-sizing: border-box;
 }
+
 .pnlm-container {
   height: 100% !important;
 }
+
 .wrapper {
   display: flex;
   flex-direction: column;
 }
+
 .classRoom {
   height: 100%;
   display: flex;

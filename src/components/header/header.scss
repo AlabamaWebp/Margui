@@ -1,4 +1,5 @@
 @import "../../style/vars.scss";
+
 .mainHeader {
     height: 80px;
     width: 100%;
@@ -9,10 +10,12 @@
     background-color: $main;
     color: white;
 }
+
 .hover {
     display: flex;
     justify-content: center;
     align-items: center;
+
     .name {
         margin: 0 10px 0 0;
         font-size: 24px;

@@ -1,6 +1,5 @@
 import { Link, useLocation} from 'react-router-dom'
 // import { Pannellum } from "pannellum-react";
-import '../App.css';
 import React from 'react';
 
 const Navigator = () => {

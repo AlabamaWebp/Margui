@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { Pannellum } from "pannellum-react";
+// import { Pannellum } from "pannellum-react";
 // import './App.css';
 import React, { useState } from 'react';
 
@@ -18,10 +18,10 @@ function App() {
     <>
       <div className="wrapper">
         <Header1 
-        floor = {floor}
-        setFloor = {setFloor}
-        cabinet = {cabinet}
-        setСabinet = {setСabinet}
+          floor = {floor}
+          setFloor = {setFloor}
+          cabinet = {cabinet}
+          setСabinet = {setСabinet}
         ></Header1>
         {/* <hoverContainer/> */}
         {/* <Navigator /> */}

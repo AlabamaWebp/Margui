@@ -1,8 +1,9 @@
-const notPage = () => {
-    return(
-        <>
-        <h1>Note page</h1>
-        </>
-    )
+import { useNavigate  } from "react-router-dom";
+
+const NotPage = () => {
+    const to = "/museum";
+    useNavigate()(to);
+
+    return(<></>);
 }
-export default notPage;
+export default NotPage;

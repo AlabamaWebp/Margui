@@ -8,7 +8,7 @@ const Header = (
     setСabinet,
 ) => {
     let text1 = "2"
-    let items1 = ["1", "1", "1"];
+    let items1 = ["1", "2", "3"];
     function setItem1(d) {
         console.log(d);
     }

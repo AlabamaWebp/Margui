@@ -7,7 +7,7 @@ const HoverContainer = (vars) => {
     return (
         <div className='hovverTemplate'>
             <div className="hoverContainer">
-                <span>{vars.text}</span>
+                <span className='htext'>{vars.text}</span>
             </div>
             <div className="hoverMenu">
                 {vars.items.map((item, index) => (

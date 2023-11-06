@@ -1,18 +1,17 @@
 import React from 'react';
 
 const HoverContainer = (vars) => {
-    // console.log("1 " + JSON.stringify(text));
-    // console.log("2 " + vars.items);
-    // console.log("3 " + JSON.stringify(setItem));
-    // let setItem1 = setItem
+    const change = (event) => {
+        vars.onChange(event.target.innerHTML)
+    }
     return (
         <div className='hovverTemplate'>
-        <div className="hoverContainer">
+            <div className="hoverContainer">
             <span>{vars.text}</span>
         </div>
         <div className="hoverMenu">
             {vars.items.map((item, index) => (
-                <span key={index} className='hoverMenuItem' onClick={vars.setItem(item)}>{item}</span>
+                <span key={index} className='hoverMenuItem' onClick={change}>{item}</span>
             ))}
         </div>
         </div>

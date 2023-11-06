@@ -28,7 +28,7 @@ function App() {
         <Routes>
           <Route path='/museum' element={<Museum />} />
           <Route path='/classroom_1' element={<Classroom_1 />} />
-          <Route path='/classroom_2' element={<Classroom_2 />} />
+          {/* <Route path='/classroom_2' element={<Classroom_2 />} /> */}
           <Route path='*' element={<NotPage />} />
         </Routes>
       </div>

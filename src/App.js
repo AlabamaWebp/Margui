@@ -1,15 +1,8 @@
-// import { Route, Routes } from 'react-router-dom';
-// import { Pannellum } from "pannellum-react";
-// import './App.css';
 import React, { useState } from 'react';
-// import Museum from './pages/museum'
-// import Classroom_1 from './pages/classroom1'
-// import Classroom_2 from './pages/classroom2'
-// import Navigator from './components/navigator';
 import Header1 from './components/header/header';
-// import NotPage from './pages/notpage';
 import Panelm from "./components/pannellum-all";
 import Museum_data from './components/data/pannellum/museum';
+import cabs1 from './components/data/header/cabs';
 
 function App() {
   // const [floor, setFloor] = useState();
@@ -17,7 +10,17 @@ function App() {
   const [data, setData] = useState(Museum_data);
   function updateCabinet(value) {
     setСabinet(value);
-    setData(Museum_data)
+    switch (value) {
+      case cabs1[0]:
+        setData(Museum_data);
+        break;
+      case cabs1[1]:
+        setData(Museum_data);
+        break;
+    
+      default:
+        break;
+    }
   }
 
   return (

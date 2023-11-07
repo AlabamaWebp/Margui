@@ -20,7 +20,7 @@ function Panlm(props) {
         <>
             <div className="pannellum_wrapper">
                 <Pannellum
-                    hotspotDebug
+                    // hotspotDebug
                     autoLoad
 
                     title={current_data.title}

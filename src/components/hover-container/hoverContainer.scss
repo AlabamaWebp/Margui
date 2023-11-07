@@ -48,6 +48,7 @@
     // right: 0;
     transition: .2s;
     background-color: $back;
+    border-radius: 0 0 5px 5px;
 
     &:hover {
         opacity: 1 !important;

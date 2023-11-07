@@ -1,53 +1,61 @@
 import { Pannellum } from "pannellum-react";
-import React from 'react';
+import React, { Component } from 'react'
 
+export default class Panlm extends Component {
+    constructor(props) {
+        super(props);
+        // Не вызывайте здесь this.setState()!
+        this.state = {
+            current_data: this.props.data[Object.keys(this.main)[0]]
+        };
+    }
+    main = this.props.data; // main[Object.keys(main)[0]]
+    hfov = 120;
 
-function Panlm(props) {
+    componentDidMount() { 
+        console.log(this.props.data, this.state);
+     }
 
-    const main = props[Object.keys(props)[0]];
-    let hfov = 120;
-
-    const [current_data, setCurrentData] = React.useState(main[Object.keys(main)[0]]);
-
-    function changeScene(sceneId, targetYaw) {
-        const tmp = main[sceneId];
+    changeScene(sceneId, targetYaw) {
+        const tmp = this.main[sceneId];
         if (targetYaw) {
             tmp.yaw = targetYaw;
         }
-        setCurrentData(tmp)
+        this.setState({
+            current_data: tmp
+        })
     }
+    render() {
+        return (
+            <>
+                <div className="pannellum_wrapper">
+                    <Pannellum
+                        // hotspotDebug
+                        autoLoad
 
-    return (
-        <>
-            <div className="pannellum_wrapper">
-                <Pannellum
-                    // hotspotDebug
-                    autoLoad
+                        title={this.state.current_data.title}
+                        hfov={this.hfov}
+                        pitch={this.state.current_data.pitch}
+                        yaw={this.state.current_data.yaw}
+                        type={this.state.current_data.type}
+                        image={this.state.current_data.image}
+                        hotSpots={this.state.current_data.hotSpots}
+                    >
+                        {!this.state.current_data.hotSpots ? 0 : this.state.current_data.hotSpots.map((hotspot, index) => (
+                            <Pannellum.Hotspot
+                                key={index}
+                                pitch={hotspot.pitch ? hotspot.pitch : undefined}
+                                yaw={hotspot.yaw ? hotspot.yaw : undefined}
+                                type={hotspot.type ? hotspot.type : undefined}
+                                targetYaw={hotspot.targetYaw ? hotspot.targetYaw : undefined}
+                                text={hotspot.text ? hotspot.text : undefined}
+                                handleClick={() => this.changeScene(hotspot.sceneId, hotspot.targetYaw)}
+                            />
+                        ))}
 
-                    title={current_data.title}
-                    hfov={hfov}
-                    pitch={current_data.pitch}
-                    yaw={current_data.yaw}
-                    type={current_data.type}
-                    image={current_data.image}
-                    hotSpots={current_data.hotSpots}
-                >
-                    {!current_data.hotSpots ? 0 : current_data.hotSpots.map((hotspot, index) => (
-                        <Pannellum.Hotspot
-                            key={index}
-                            pitch={hotspot.pitch ? hotspot.pitch : undefined}
-                            yaw={hotspot.yaw ? hotspot.yaw : undefined}
-                            type={hotspot.type ? hotspot.type : undefined}
-                            targetYaw={hotspot.targetYaw ? hotspot.targetYaw : undefined}
-                            text={hotspot.text ? hotspot.text : undefined}
-                            handleClick={() => changeScene(hotspot.sceneId, hotspot.targetYaw)}
-                        />
-                    ))}
-
-                </Pannellum>
-            </div>
-        </>
-    )
+                    </Pannellum>
+                </div>
+            </>
+        )
+    }
 }
-
-export default Panlm;

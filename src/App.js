@@ -24,7 +24,6 @@ function App() {
         break;
     }
   }
-
   return (
     <>
       <div className="wrapper">

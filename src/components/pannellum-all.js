@@ -4,7 +4,6 @@ import React, { Component } from 'react'
 export default class Panlm extends Component {
     constructor(props) {
         super(props);
-        // Не вызывайте здесь this.setState()!
         this.state = {
             current_data: this.props.data[Object.keys(this.main)[0]]
         };
@@ -12,9 +11,9 @@ export default class Panlm extends Component {
     main = this.props.data; // main[Object.keys(main)[0]]
     hfov = 120;
 
-    componentDidMount() { 
-        console.log(this.props.data, this.state);
-     }
+    // componentDidMount() { 
+    //     console.log(this.props.data, this.state);
+    //  }
 
     changeScene(sceneId, targetYaw) {
         const tmp = this.main[sceneId];

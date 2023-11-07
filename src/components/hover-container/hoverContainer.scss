@@ -5,20 +5,25 @@
 }
 
 .hoverContainer {
-    display: flex;
+    height: 40px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     border-radius: 5px;
     border: 2px solid $back;
     position: relative;
-    padding: 8px 15px;
-    justify-content: center;
-    align-items: center;
+    // padding: 8px 15px;
     user-select: none;
     margin: 5px 0;
-    &.htext {
-        text-align: center;
+    .htext {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;align-items: center;
+        // text-align: center;
     }
     &:hover {
-        &~.hoverMenu {
+        .hoverMenu {
             opacity: 1 !important;
             pointer-events: all !important;
         }
@@ -28,18 +33,20 @@
 }
 
 .hoverMenu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
     pointer-events: none;
 
     opacity: 0;
-    position: absolute;
-
-    top: 46px;
-    left: 0;
-    right: 0;
+    // position: absolute;
+    position: relative;
+    // top: 3px;
+    // top: 41px;
+    // left: 0;
+    // right: 0;
     transition: .2s;
     background-color: $back;
 

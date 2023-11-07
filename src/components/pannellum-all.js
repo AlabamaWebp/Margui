@@ -4,7 +4,8 @@ import React from 'react';
 
 function Panlm(props) {
 
-    const main = props[Object.keys(props)[0]]
+    const main = props[Object.keys(props)[0]];
+    let hfov = 120;
 
     const [current_data, setCurrentData] = React.useState(main[Object.keys(main)[0]]);
 
@@ -24,14 +25,14 @@ function Panlm(props) {
                     autoLoad
 
                     title={current_data.title}
-                    hfov={current_data.hfov}
+                    hfov={hfov}
                     pitch={current_data.pitch}
                     yaw={current_data.yaw}
                     type={current_data.type}
                     image={current_data.image}
                     hotSpots={current_data.hotSpots}
                 >
-                    {current_data.hotSpots.map((hotspot, index) => (
+                    {!current_data.hotSpots ? 0 : current_data.hotSpots.map((hotspot, index) => (
                         <Pannellum.Hotspot
                             key={index}
                             pitch={hotspot.pitch ? hotspot.pitch : undefined}

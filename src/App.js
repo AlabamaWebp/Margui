@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Header1 from './components/header/header';
 import Panelm from "./components/pannellum-all";
-import Museum_data from './components/data/pannellum/museum';
 import cabs1 from './components/data/header/cabs';
+import Museum_data from './components/data/pannellum/museum';
+import c114 from './components/data/pannellum/c114';
 
 function App() {
   // const [floor, setFloor] = useState();
@@ -15,10 +16,11 @@ function App() {
         setData(Museum_data);
         break;
       case cabs1[1]:
-        setData(Museum_data);
+        setData(c114);
         break;
     
       default:
+        setData(c114);
         break;
     }
   }

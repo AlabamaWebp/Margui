@@ -9,12 +9,10 @@ const Header = (
         setСabinet, }
 ) => {
     const [value1, setValue1] = useState("1");
-    const [value2, setValue2] = useState("1");
-    const [value3, setValue3] = useState("1");
     let hover = [
         {
             name: "Кабинет",
-            items: ["Музей", "2", "3"],
+            items: ["Музей", "204 каб.", "208 каб.", "116 каб.", "114 каб."],
             text: value1,
             change: (value) => {
                 setValue1(value);

@@ -11,20 +11,18 @@ import Header1 from './components/header/header';
 import NotPage from './pages/notpage'
 
 function App() {
-  const [floor, setFloor] = useState();
-  const [cabinet, setСabinet] = useState();
+  // const [floor, setFloor] = useState();
+  const [cabinet, setСabinet] = useState(0);
 
   return (
     <>
       <div className="wrapper">
         <Header1 
-          floor = {floor}
-          setFloor = {setFloor}
+          // floor = {floor}
+          // setFloor = {setFloor}
           cabinet = {cabinet}
           setСabinet = {setСabinet}
         ></Header1>
-        {/* <hoverContainer/> */}
-        {/* <Navigator /> */}
         <Routes>
           <Route path='/museum' element={<Museum />} />
           <Route path='/classroom_1' element={<Classroom_1 />} />
@@ -37,3 +35,10 @@ function App() {
 }
 
 export default App;
+
+// index
+// "Музей",     0
+// "204 каб.",  1
+// "208 каб.",  2
+// "116 каб.",  3
+// "114 каб."   4

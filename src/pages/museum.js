@@ -14,12 +14,8 @@ import musei5 from '../assets/images/musei5.jpg';
 import musei6 from '../assets/images/musei6.jpg';
 
 function Museum() {
-
   const museiTitle = "Зоологический музей";
-  const draggable = true;
   const hfov = 110;
-  const compass = true;
-  const path = "../assets/images/"  
   const data = {
     "coridor1": {
       "title": "Коридор",
@@ -168,37 +164,37 @@ function Museum() {
     setCurrentData(tmp)
   }
 
-    return(
-        <>
-        <div className="Museum">
-            <Pannellum
-            hotspotDebug
-            autoLoad
+  return (
+    <>
+      <div className="Museum">
+        <Pannellum
+          hotspotDebug
+          autoLoad
 
-            title={current_data.title}
-            hfov={current_data.hfov}
-            pitch={current_data.pitch}
-            yaw={current_data.yaw}
-            type={current_data.type}
-            image={current_data.image}
-            hotSpots={current_data.hotSpots}
+          title={current_data.title}
+          hfov={current_data.hfov}
+          pitch={current_data.pitch}
+          yaw={current_data.yaw}
+          type={current_data.type}
+          image={current_data.image}
+          hotSpots={current_data.hotSpots}
         >
-        {current_data.hotSpots.map((hotspot, index) => (
+          {current_data.hotSpots.map((hotspot, index) => (
             <Pannellum.Hotspot
-            key={index}
-            pitch={hotspot.pitch ? hotspot.pitch : undefined}
-            yaw={hotspot.yaw ? hotspot.yaw : undefined}
-            type={hotspot.type ? hotspot.type : undefined}
-            targetYaw={hotspot.targetYaw ? hotspot.targetYaw : undefined}
-            text={hotspot.text ? hotspot.text : undefined}
-            handleClick={() => changeScene(hotspot.sceneId, hotspot.targetYaw)}
+              key={index}
+              pitch={hotspot.pitch ? hotspot.pitch : undefined}
+              yaw={hotspot.yaw ? hotspot.yaw : undefined}
+              type={hotspot.type ? hotspot.type : undefined}
+              targetYaw={hotspot.targetYaw ? hotspot.targetYaw : undefined}
+              text={hotspot.text ? hotspot.text : undefined}
+              handleClick={() => changeScene(hotspot.sceneId, hotspot.targetYaw)}
             />
-        ))}
-            
-            </Pannellum>
-        </div>
-        </>
-    )
+          ))}
+
+        </Pannellum>
+      </div>
+    </>
+  )
 }
 
 export default Museum;

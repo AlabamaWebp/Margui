@@ -1,21 +1,24 @@
 
 import { React, useState } from 'react';
 import HoverContainer from '../hover-container/hoverContainer';
+import cabs1 from '../data/header/cabs';
 
 const Header = (
-    { floor,
-        setFloor,
+    {
+        // floor,
+        // setFloor,
         cabinet,
         setСabinet, }
 ) => {
-    const [value1, setValue1] = useState("1");
+    const [value1, setValue1] = useState("Музей");
     let hover = [
         {
             name: "Кабинет",
-            items: ["Музей", "204 каб.", "208 каб.", "116 каб.", "114 каб."],
+            items: cabs1,
             text: value1,
             change: (value) => {
                 setValue1(value);
+                setСabinet(value);
             }
         },
     ]
@@ -37,6 +40,7 @@ const Header = (
 }
 export default Header;
 
+// export const cab = ["Музей", "204 каб.", "208 каб.", "116 каб.", "114 каб."];
 
 // Пример обьекта hover
 

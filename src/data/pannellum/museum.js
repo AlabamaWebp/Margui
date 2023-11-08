@@ -1,9 +1,9 @@
-import coridor1 from '../../../assets/images/museum/coridor1.jpg';
-import musei2 from '../../../assets/images/museum/musei2.jpg';
-import musei3 from '../../../assets/images/museum/musei3.jpg';
-import musei4 from '../../../assets/images/museum/musei4.jpg';
-import musei5 from '../../../assets/images/museum/musei5.jpg';
-import musei6 from '../../../assets/images/museum/musei6.jpg';
+import coridor1 from '../../assets/images/museum/coridor1.jpg';
+import musei2 from '../../assets/images/museum/musei2.jpg';
+import musei3 from '../../assets/images/museum/musei3.jpg';
+import musei4 from '../../assets/images/museum/musei4.jpg';
+import musei5 from '../../assets/images/museum/musei5.jpg';
+import musei6 from '../../assets/images/museum/musei6.jpg';
 const museiTitle = "Зоологический музей";
 const hfov = 110;
 const data = {

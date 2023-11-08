@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Header1 from './components/header/header';
 import Panelm from "./components/pannellum-all";
-import cabs1 from './components/data/header/cabs';
-import Museum_data from './components/data/pannellum/museum';
-import c114 from './components/data/pannellum/c114';
+import cabs1 from './data/header/cabs';
+import Museum_data from './data/pannellum/museum';
+import c114 from './data/pannellum/c114';
 
 function App() {
   // const [floor, setFloor] = useState();

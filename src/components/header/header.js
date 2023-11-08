@@ -1,7 +1,7 @@
 
 import { React, useState } from 'react';
 import HoverContainer from '../hover-container/hoverContainer';
-import cabs1 from '../data/header/cabs';
+import cabs1 from '../../data/header/cabs';
 
 const Header = (
     {

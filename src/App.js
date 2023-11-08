@@ -4,11 +4,12 @@ import Panelm from "./components/pannellum-all";
 import cabs1 from './data/header/cabs';
 import Museum_data from './data/pannellum/museum';
 import c114 from './data/pannellum/c114';
+import { getConfig } from 'react-pannellum';
 
 function App() {
   // const [floor, setFloor] = useState();
   const [cabinet, setСabinet] = useState(0);
-  const [data, setData] = useState(Museum_data);
+  const [data, setData] = useState(c114);
   function updateCabinet(value) {
     setСabinet(value);
     switch (value) {
@@ -24,6 +25,9 @@ function App() {
         break;
     }
   }
+  function click() {
+    console.log(getConfig());
+  }
   return (
     <>
       <div className="wrapper">
@@ -32,6 +36,7 @@ function App() {
           // setFloor = {setFloor}
           cabinet = {cabinet}
           setСabinet = {updateCabinet}
+          onClick={() => click}
         ></Header1>
         <Panelm data={data}/>
         {/* <Routes>

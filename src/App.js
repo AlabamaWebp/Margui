@@ -5,7 +5,7 @@ import cabs1 from './data/header/cabs';
 import Museum_data from './data/pannellum/museum';
 import c114 from './data/pannellum/c114';
 import c217 from './data/pannellum/c217';
-import { getConfig } from 'react-pannellum';
+// import { getConfig } from 'react-pannellum';
 
 function App() {
   // const [floor, setFloor] = useState();
@@ -28,9 +28,9 @@ function App() {
         break;
     }
   }
-  function click() {
-    console.log(getConfig());
-  }
+  // function click() {
+  //   console.log(getConfig());
+  // }
   return (
     <>
       <div className="wrapper">
@@ -39,7 +39,7 @@ function App() {
           // setFloor = {setFloor}
           cabinet = {cabinet}
           setСabinet = {updateCabinet}
-          onClick={() => click}
+          // onClick={() => click}
         ></Header1>
         <Panelm data={data}/>
         {/* <Routes>

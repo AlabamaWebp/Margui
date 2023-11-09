@@ -10,10 +10,8 @@ export default class Panlm extends Component {
     }
     main = this.props.data; // main[Object.keys(main)[0]]
     hfov = 120;
-
-    // componentDidMount() { 
-    //     console.log(this.props.data, this.state);
-    //  }
+    // componentDidMount() {
+    // }
 
     changeScene(sceneId, targetYaw) {
         const tmp = this.main[sceneId];
@@ -24,6 +22,10 @@ export default class Panlm extends Component {
             current_data: tmp
         })
     }
+    // test(a) {
+    //     console.log(a);
+    // }
+
     render() {
         return (
             <>
@@ -31,22 +33,27 @@ export default class Panlm extends Component {
                     <ReactPannellum
                         // hotspotDebug
                         autoLoad
-                        
+
                         id="PannellumId"
                         sceneId={this.state.current_data.sceneId}
                         imageSource={this.state.current_data.image}
                         config={
                             {
                                 autoLoad: true,
+                                // hotSpotDebug: true,
+                                
                                 title: this.state.current_data.title,
-                                hfov: this.hfov,
-                                pitch: this.state.current_data.pitch,
-                                yaw: this.state.current_data.yaw,
+                                hfov: this.hfov ? this.hfov : 110,
+                                pitch: this.state.current_data.pitch ? this.state.current_data.pitch : 0,
+                                yaw: this.state.current_data.yaw ? this.state.current_data.yaw : 0,
                                 type: this.state.current_data.type,
-                                hotSpots: this.state.current_data.hotSpots
+                                hotSpots: this.state.current_data.hotSpots ? this.state.current_data.hotSpots : [],
+                                // clickHandlerFunc: this.test
                             }
                         }
                     >
+                   
+
                         {/* {!this.state.current_data.hotSpots ? 0 : this.state.current_data.hotSpots.map((hotspot, index) => (
                             <Pannellum.Hotspot
                                 key={index}

@@ -4,12 +4,13 @@ import Panelm from "./components/pannellum-all";
 import cabs1 from './data/header/cabs';
 import Museum_data from './data/pannellum/museum';
 import c114 from './data/pannellum/c114';
+import c217 from './data/pannellum/c217';
 import { getConfig } from 'react-pannellum';
 
 function App() {
   // const [floor, setFloor] = useState();
   const [cabinet, setСabinet] = useState(0);
-  const [data, setData] = useState(c114);
+  const [data, setData] = useState(c217);
   function updateCabinet(value) {
     setСabinet(value);
     switch (value) {
@@ -19,7 +20,9 @@ function App() {
       case cabs1[1]:
         setData(c114);
         break;
-    
+      case cabs1[2]:
+        setData(c217);
+        break;
       default:
         setData(c114);
         break;

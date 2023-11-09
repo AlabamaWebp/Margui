@@ -31,7 +31,7 @@ export default class Panlm extends Component {
                     <ReactPannellum
                         // hotspotDebug
                         autoLoad
-
+                        
                         id="PannellumId"
                         sceneId={this.state.current_data.sceneId}
                         imageSource={this.state.current_data.image}

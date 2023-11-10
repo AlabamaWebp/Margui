@@ -13,6 +13,7 @@ const c207 = {
         "yaw": 0,
         "type": "r",
         "image": c207_1,
+        "getAllScenes": true,
         "hotSpots": [
             {
                 "pitch": -10,

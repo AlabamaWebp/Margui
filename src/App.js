@@ -15,7 +15,7 @@ function App() {
     setСabinet(value);
     switch (value) {
       case cabs1[0]:
-        setData(Museum_data);
+        setData(c217);
         break;
       case cabs1[1]:
         setData(c114);

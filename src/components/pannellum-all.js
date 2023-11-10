@@ -1,12 +1,11 @@
 import { Pannellum } from "pannellum-react";
 import React, { Component } from 'react'
-import c217_info1 from "../data/pannellum/217/info/c217_info1";
 
 export default class Panlm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            current_data: this.props.data[Object.keys(this.main)[0]],
+            current_data: [],
             info: {},
             is_info: false
         };
@@ -14,43 +13,15 @@ export default class Panlm extends Component {
     }
     main = this.props.data; // main[Object.keys(main)[0]]
     hfov = 120;
-    // componentDidMount() {
-        // setTimeout(() => {
-        // }, 10);
-    // }
-
-    // changeScene(sceneId, targetYaw) {
-    //     const tmp = this.main[sceneId];
-    //     if (targetYaw) {
-    //         tmp.yaw = targetYaw;
-    //     }
-    //     this.setState({
-    //         current_data: tmp
-    //     })
-    // }
     changeScene(sceneId, targetYaw) {
         const tmp = this.main[sceneId];
         if (targetYaw) {
             tmp.yaw = targetYaw;
         }
-        // this.setState((state) => {
-        //     return {
-        //         current_data: tmp,
-        //         info: state.info,
-        //         is_info: state.is_info,
-        //     }
-        // })
         this.state.current_data = tmp;
         this.updateState();
     }
     showInfo(arg) {
-        // this.setState((state) => {
-        //     return {
-        //         current_data: state.current_data,
-        //         info: arg,
-        //         is_info: true,
-        //     }
-        // })
         this.state.info = arg;
         this.state.is_info = true;
         this.updateState();
@@ -63,6 +34,12 @@ export default class Panlm extends Component {
     }
     updateState() {
         this.setState((state) => state)
+    }
+    componentDidMount() {
+        // setTimeout(() => {
+            this.state.current_data = this.props.data[Object.keys(this.main)[0]];
+            this.updateState()
+        // }, 1);
     }
 
     render() {
@@ -95,14 +72,15 @@ export default class Panlm extends Component {
                         )) : undefined}
 
                     </Pannellum>
-                    {this.state.is_info ? 
-                    <div className="backdrop" onClick={this.closeModal1}>
-                        {this.state.info} 
+                    {this.state.is_info ?
+                        <div className="backdrop" onClick={this.closeModal1}>
+                            {this.state.info}
+                        </div>
+                        : <></>}
+                    <div className="infoBottom">
+                        <h2>Информация</h2>
+                        <p>Информация</p>
                     </div>
-                    : <></>}
-                    {/* <div className="pannellum_info_stand">
-                    
-                    </div> */}
                 </div>
 
             </>

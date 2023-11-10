@@ -10,7 +10,7 @@ const Header = (
         cabinet,
         setСabinet, }
 ) => {
-    const [value1, setValue1] = useState("Музей");
+    const [value1, setValue1] = useState("217 каб.");
     let hover = [
         {
             name: "Кабинет",

@@ -7,9 +7,9 @@ import C217_info1 from "./info/c217_info1";
 const c217 = {
     "one": {
         "sceneId": "one",
-        "title": "114 кабинет",
-        // "pitch": -3,
-        // "yaw": 0,
+        "title": "217 кабинет",
+        "pitch": -3,
+        "yaw": -174,
         "type": "equirectangular",
         "image": c217_1,
         "hotSpots": [
@@ -24,7 +24,7 @@ const c217 = {
     },
     "two": {
         "sceneId": "two",
-        "title": "114 кабинет",
+        "title": "217 кабинет",
         "pitch": -11,
         "yaw": 90,
         "type": "equirectangular",
@@ -43,7 +43,6 @@ const c217 = {
                 "type": "custom",
                 "cssClass": ".pnlm-hotspot.pnlm-info info",
                 "info": (<C217_info1/>)
-                // "text": "Стенд1",
               }
           ]
     },

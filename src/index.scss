@@ -41,48 +41,76 @@ body,
   display: flex;
   position: relative;
 }
+
 .pannellum_wrapper {
   height: 100%;
 }
+
 #PannellumId {
   width: 100% !important;
 }
+
 .pnlm-hotspot.pnlm-info {
   cursor: pointer;
 }
+
 // .info {
 //   background-image: url(https://www.flaticon.com/ru/free-animated-icon/click_6416353?related_id=6416353);
 // }
 .backdrop {
   position: fixed;
-  top: 0;bottom: 0;right: 0;left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.2);
-  display: flex;justify-content: center;align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 3;
 }
+
 .modalPnlm {
   display: flex;
   padding: 10px;
-  background-color: #dadada;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
   border-radius: 5px;
   max-height: 90%;
   max-width: 90%;
+
   img {
-    max-height: 100%;
-    max-width: 100%;
+    // max-height: 100%;
+    max-width: 45%;
     float: left;
   }
+
   // .mimages {
   //   max-height: 100%;
   //   max-width: 50%;
   // }
-  // .mtext {
-  //   width: 100%;
-  // }
+  .mtext {
+    width: 100%;
+    padding: 0 0 0 15px;
+    overflow: auto;
+  }
+
   // .mimages {
 
   // }
   // .mtext {
 
   // }
+}
+
+.infoBottom {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  height: auto;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 5px 5px 0 0;
+  padding: 10px;
 }

@@ -1,19 +1,23 @@
 import { Pannellum } from "pannellum-react";
 import React, { Component } from 'react'
+import c217_info1 from "../data/pannellum/c217_info1";
 
 export default class Panlm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            current_data: this.props.data[Object.keys(this.main)[0]]
+            current_data: this.props.data[Object.keys(this.main)[0]],
+            info: {},
+            is_info: false
         };
+        this.closeModal1 = this.closeModal1.bind(this)
     }
     main = this.props.data; // main[Object.keys(main)[0]]
     hfov = 120;
-    componentDidMount() {
-        setTimeout(() => {
-        }, 10);
-    }
+    // componentDidMount() {
+        // setTimeout(() => {
+        // }, 10);
+    // }
 
     // changeScene(sceneId, targetYaw) {
     //     const tmp = this.main[sceneId];
@@ -29,10 +33,36 @@ export default class Panlm extends Component {
         if (targetYaw) {
             tmp.yaw = targetYaw;
         }
-        this.setState({current_data: tmp})
+        // this.setState((state) => {
+        //     return {
+        //         current_data: tmp,
+        //         info: state.info,
+        //         is_info: state.is_info,
+        //     }
+        // })
+        this.state.current_data = tmp;
+        this.updateState();
     }
-    showInfo(args) {
-        alert(args);
+    showInfo(arg) {
+        // this.setState((state) => {
+        //     return {
+        //         current_data: state.current_data,
+        //         info: arg,
+        //         is_info: true,
+        //     }
+        // })
+        this.state.info = arg;
+        this.state.is_info = true;
+        this.updateState();
+    }
+    closeModal1(ev) {
+        if (ev.target.className.includes("backdrop")) {
+            this.state.is_info = false;
+            this.updateState();
+        }
+    }
+    updateState() {
+        this.setState((state) => state)
     }
 
     render() {
@@ -60,11 +90,16 @@ export default class Panlm extends Component {
                                 targetYaw={hotspot.targetYaw ? hotspot.targetYaw : undefined}
                                 text={hotspot.text ? hotspot.text : undefined}
                                 cssClass={hotspot.cssClass ? hotspot.cssClass : undefined}
-                                handleClick={() => hotspot.cssClass && hotspot.cssClass.includes("info") ? this.showInfo("1") : this.changeScene(hotspot.sceneId, hotspot.targetYaw)}
+                                handleClick={() => hotspot.cssClass && hotspot.cssClass.includes("info") ? this.showInfo(hotspot.info) : this.changeScene(hotspot.sceneId, hotspot.targetYaw)}
                             />
                         )) : undefined}
 
                     </Pannellum>
+                    {this.state.is_info ? 
+                    <div className="backdrop" onClick={this.closeModal1}>
+                        {this.state.info} 
+                    </div>
+                    : <></>}
                     {/* <div className="pannellum_info_stand">
                     
                     </div> */}

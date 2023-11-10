@@ -24,7 +24,7 @@ const c217 = {
     },
     "two": {
         "sceneId": "two",
-        "title": "217 кабинет",
+        "title": "Онтогенетический музей",
         "pitch": -11,
         "yaw": 90,
         "type": "equirectangular",

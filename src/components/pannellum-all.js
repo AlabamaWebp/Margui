@@ -1,4 +1,4 @@
-import ReactPannellum, { getConfig } from "react-pannellum";
+import { Pannellum } from "pannellum-react";
 import React, { Component } from 'react'
 
 export default class Panlm extends Component {
@@ -10,44 +10,48 @@ export default class Panlm extends Component {
     }
     main = this.props.data; // main[Object.keys(main)[0]]
     hfov = 120;
+    componentDidMount() {
+        setTimeout(() => {
+        }, 10);
+    }
 
-    // componentDidMount() { 
-    //     console.log(this.props.data, this.state);
-    //  }
-
+    // changeScene(sceneId, targetYaw) {
+    //     const tmp = this.main[sceneId];
+    //     if (targetYaw) {
+    //         tmp.yaw = targetYaw;
+    //     }
+    //     this.setState({
+    //         current_data: tmp
+    //     })
+    // }
     changeScene(sceneId, targetYaw) {
         const tmp = this.main[sceneId];
         if (targetYaw) {
             tmp.yaw = targetYaw;
         }
-        this.setState({
-            current_data: tmp
-        })
+        this.setState({current_data: tmp})
     }
+    showInfo(args) {
+        alert(args);
+    }
+
     render() {
         return (
             <>
                 <div className="pannellum_wrapper">
-                    <ReactPannellum
-                        // hotspotDebug
+                    <Pannellum
+                        hotspotDebug
                         autoLoad
 
-                        id="PannellumId"
-                        sceneId={this.state.current_data.sceneId}
-                        imageSource={this.state.current_data.image}
-                        config={
-                            {
-                                autoLoad: true,
-                                title: this.state.current_data.title,
-                                hfov: this.hfov,
-                                pitch: this.state.current_data.pitch,
-                                yaw: this.state.current_data.yaw,
-                                type: this.state.current_data.type,
-                                hotSpots: this.state.current_data.hotSpots
-                            }
-                        }
+                        title={this.state.current_data.title}
+                        hfov={this.state.current_data.hfov}
+                        pitch={this.state.current_data.pitch}
+                        yaw={this.state.current_data.yaw}
+                        type={this.state.current_data.type}
+                        image={this.state.current_data.image}
+                        hotSpots={this.state.current_data.hotSpots}
                     >
-                        {/* {!this.state.current_data.hotSpots ? 0 : this.state.current_data.hotSpots.map((hotspot, index) => (
+                        {this.state.current_data.hotSpots ? this.state.current_data.hotSpots.map((hotspot, index) => (
                             <Pannellum.Hotspot
                                 key={index}
                                 pitch={hotspot.pitch ? hotspot.pitch : undefined}
@@ -55,12 +59,17 @@ export default class Panlm extends Component {
                                 type={hotspot.type ? hotspot.type : undefined}
                                 targetYaw={hotspot.targetYaw ? hotspot.targetYaw : undefined}
                                 text={hotspot.text ? hotspot.text : undefined}
-                                handleClick={() => this.changeScene(hotspot.sceneId, hotspot.targetYaw)}
+                                cssClass={hotspot.cssClass ? hotspot.cssClass : undefined}
+                                handleClick={() => hotspot.cssClass && hotspot.cssClass.includes("info") ? this.showInfo("1") : this.changeScene(hotspot.sceneId, hotspot.targetYaw)}
                             />
-                        ))} */}
+                        )) : undefined}
 
-                    </ReactPannellum>
+                    </Pannellum>
+                    {/* <div className="pannellum_info_stand">
+                    
+                    </div> */}
                 </div>
+
             </>
         )
     }

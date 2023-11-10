@@ -1,7 +1,8 @@
 import c217_1 from "../../assets/images/217/с217_1.jpg"
 import c217_2 from "../../assets/images/217/с217_2.jpg"
 
-import c217_s1 from "../../assets/images/217/stands/1.jpg"
+// import c217_s1 from "../../assets/images/217/stands/1.jpg"
+import C217_info1 from "./c217_info1";
 
 const c217 = {
     "one": {
@@ -41,10 +42,7 @@ const c217 = {
                 "yaw": 92,
                 "type": "custom",
                 "cssClass": ".pnlm-hotspot.pnlm-info info",
-                "info": {
-                    "images": [c217_s1],
-                    "text": [{"head": "Lorem", "body": "lorem"}]
-                }
+                "info": (<C217_info1/>)
                 // "text": "Стенд1",
               }
           ]

@@ -1,8 +1,8 @@
-import c217_1 from "../../assets/images/217/с217_1.jpg"
-import c217_2 from "../../assets/images/217/с217_2.jpg"
+import c217_1 from "../../../assets/images/217/с217_1.jpg"
+import c217_2 from "../../../assets/images/217/с217_2.jpg"
 
 // import c217_s1 from "../../assets/images/217/stands/1.jpg"
-import C217_info1 from "./c217_info1";
+import C217_info1 from "./info/c217_info1";
 
 const c217 = {
     "one": {

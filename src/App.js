@@ -4,7 +4,7 @@ import Panelm from "./components/pannellum-all";
 import cabs1 from './data/header/cabs';
 import Museum_data from './data/pannellum/museum';
 import c114 from './data/pannellum/c114';
-import c217 from './data/pannellum/c217';
+import c217 from './data/pannellum/217/c217';
 // import { getConfig } from 'react-pannellum';
 
 function App() {

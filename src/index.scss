@@ -63,18 +63,22 @@ body,
 .modalPnlm {
   display: flex;
   padding: 10px;
-  background-color: #fff;
+  background-color: #dadada;
   border-radius: 5px;
   max-height: 90%;
   max-width: 90%;
-  .mimages {
+  img {
     max-height: 100%;
-    max-width: 50%;
-    img {
-      max-height: 100%;
-      max-width: 100%;
-    }
+    max-width: 100%;
+    float: left;
   }
+  // .mimages {
+  //   max-height: 100%;
+  //   max-width: 50%;
+  // }
+  // .mtext {
+  //   width: 100%;
+  // }
   // .mimages {
 
   // }

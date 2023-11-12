@@ -1,6 +1,6 @@
 import { Pannellum } from "pannellum-react";
 import React, { Component } from 'react'
-import c217_info1 from "../data/pannellum/c217_info1";
+import c217_info1 from "../data/pannellum/217/info/c217_info1";
 
 export default class Panlm extends Component {
     constructor(props) {

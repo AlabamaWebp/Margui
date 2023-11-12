@@ -6,6 +6,9 @@ import C217_info1 from "./info/c217_info1";
 import C217_info2 from "./info/c217_info2";
 import Infob1 from "./infoBottom/infob1";
 
+
+import stands_info from "../../../components/stands-info/stands-info"
+
 const name_cab = 'Кабинет 217';
 
 

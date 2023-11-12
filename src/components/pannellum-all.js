@@ -1,68 +1,51 @@
 import { Pannellum } from "pannellum-react";
 import React, { Component } from 'react'
-import c217_info1 from "../data/pannellum/217/info/c217_info1";
 
 export default class Panlm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            current_data: this.props.data[Object.keys(this.main)[0]],
+            current_data: [],
             info: {},
-            is_info: false
+            is_info: false,
+            info_bottom: false
         };
-        this.closeModal1 = this.closeModal1.bind(this)
+        this.closeModal = this.closeModal.bind(this);
+        this.toggleInfoBottom = this.toggleInfoBottom.bind(this);
     }
     main = this.props.data; // main[Object.keys(main)[0]]
     hfov = 120;
-    // componentDidMount() {
-        // setTimeout(() => {
-        // }, 10);
-    // }
-
-    // changeScene(sceneId, targetYaw) {
-    //     const tmp = this.main[sceneId];
-    //     if (targetYaw) {
-    //         tmp.yaw = targetYaw;
-    //     }
-    //     this.setState({
-    //         current_data: tmp
-    //     })
-    // }
     changeScene(sceneId, targetYaw) {
         const tmp = this.main[sceneId];
         if (targetYaw) {
             tmp.yaw = targetYaw;
         }
-        // this.setState((state) => {
-        //     return {
-        //         current_data: tmp,
-        //         info: state.info,
-        //         is_info: state.is_info,
-        //     }
-        // })
         this.state.current_data = tmp;
         this.updateState();
     }
     showInfo(arg) {
-        // this.setState((state) => {
-        //     return {
-        //         current_data: state.current_data,
-        //         info: arg,
-        //         is_info: true,
-        //     }
-        // })
         this.state.info = arg;
         this.state.is_info = true;
         this.updateState();
     }
-    closeModal1(ev) {
+    closeModal(ev) {
         if (ev.target.className.includes("backdrop")) {
             this.state.is_info = false;
             this.updateState();
         }
     }
+    toggleInfoBottom() {
+        this.state.info_bottom = !this.state.info_bottom;
+        this.updateState()
+    }
     updateState() {
         this.setState((state) => state)
+    }
+    componentDidMount() {
+        // setTimeout(() => {
+        this.state.current_data = this.props.data[Object.keys(this.main)[0]];
+        this.updateState()
+        // }, 1);
     }
 
     render() {
@@ -95,14 +78,27 @@ export default class Panlm extends Component {
                         )) : undefined}
 
                     </Pannellum>
-                    {this.state.is_info ? 
-                    <div className="backdrop" onClick={this.closeModal1}>
-                        {this.state.info} 
+                    {this.state.is_info ?
+                        <div className="backdrop" onClick={this.closeModal}>
+                            {this.state.info}
+                        </div>
+                        :
+                        <></>
+                    }
+                    <div className="infoBottom">
+                        {this.state.info_bottom ?
+                            <div>
+                                <h2>Информация</h2>
+                                <p>Информация</p>
+                                <button onClick={this.toggleInfoBottom}>Закрыть</button>
+                            </div>
+                            :
+                            <>
+                                <button onClick={this.toggleInfoBottom}>Иконка</button>
+                            </>
+                        }
                     </div>
-                    : <></>}
-                    {/* <div className="pannellum_info_stand">
-                    
-                    </div> */}
+
                 </div>
 
             </>

@@ -42,21 +42,18 @@ const c217 = {
           "pitch": 2,
           "yaw": -10,
           "type": "custom",
-          "cssClass": ".pnlm-hotspot.pnlm-info info",
           "info": (<C217_info1/>)
         },
         {
           "pitch": 2,
           "yaw": -37,
           "type": "custom",
-          "cssClass": ".pnlm-hotspot.pnlm-info info",
           "info": (<C217_info1/>)
         },
         {
           "pitch": 2,
           "yaw": -61,
           "type": "custom",
-          "cssClass": ".pnlm-hotspot.pnlm-info info",
           "info": (<C217_info1/>)
         },
         
@@ -65,21 +62,18 @@ const c217 = {
           "pitch": 5,
           "yaw": -70,
           "type": "custom",
-          "cssClass": ".pnlm-hotspot.pnlm-info info",
           "info": (<C217_info1/>)
         },
         {
           "pitch": 5,
           "yaw": -82,
           "type": "custom",
-          "cssClass": ".pnlm-hotspot.pnlm-info info",
           "info": (<C217_info1/>)
         },
         {
           "pitch": 5,
           "yaw": -116,
           "type": "custom",
-          "cssClass": ".pnlm-hotspot.pnlm-info info",
           "info": (<C217_info1/>)
         }
       ]
@@ -93,6 +87,7 @@ const c217 = {
   "type": "equirectangular",
   "image": c217_2, 
   "infoBottom": (<Infob1/>),
+  "infoBottomHeader": "Онтогенетический музей",
   "hotSpots": [
       {
         "pitch": -17,
@@ -105,7 +100,6 @@ const c217 = {
           "pitch": 2,
           "yaw": 92,
           "type": "custom",
-          "cssClass": ".pnlm-hotspot.pnlm-info info",
           "info": (<C217_info1/>)
           // "text": "Стенд1",
         },
@@ -113,35 +107,30 @@ const c217 = {
           "pitch": 2,
             "yaw": -15,
             "type": "custom",
-            "cssClass": ".pnlm-hotspot.pnlm-info info",
             "info": (<C217_info2/>)
         },
         {
           "pitch": 2,
             "yaw": 76,
             "type": "custom",
-            "cssClass": ".pnlm-hotspot.pnlm-info info",
             "info": (<C217_info2/>)
         },
         {
           "pitch": 2,
             "yaw": 64,
             "type": "custom",
-            "cssClass": ".pnlm-hotspot.pnlm-info info",
             "info": (<C217_info1/>)
         },
         {
           "pitch": 2,
             "yaw": 59,
             "type": "custom",
-            "cssClass": ".pnlm-hotspot.pnlm-info info",
             "info": (<C217_info1/>)
         },
         {
           "pitch": 2,
             "yaw": -100,
             "type": "custom",
-            "cssClass": ".pnlm-hotspot.pnlm-info info",
             "info": (<C217_info1/>)
         },
     ]

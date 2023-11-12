@@ -58,7 +58,7 @@ export default class Panlm extends Component {
     }
     updateData() {
         this.main = this.props.data;
-        this.state.current_data = this.props.data[Object.keys(this.main)[0]];
+        this.state.current_data = this.main[Object.keys(this.main)[0]];
         this.updateState()
     }
 
@@ -87,7 +87,7 @@ export default class Panlm extends Component {
                                 targetYaw={hotspot.targetYaw ? hotspot.targetYaw : undefined}
                                 text={hotspot.text ? hotspot.text : undefined}
                                 cssClass={hotspot.cssClass ? hotspot.cssClass : undefined}
-                                handleClick={() => hotspot.cssClass && hotspot.cssClass.includes("info") ? this.showInfo(hotspot.info) : this.changeScene(hotspot.sceneId, hotspot.targetYaw)}
+                                handleClick={() => hotspot.info ? this.showInfo(hotspot.info) : this.changeScene(hotspot.sceneId, hotspot.targetYaw)}
                             />
                         )) : undefined}
 

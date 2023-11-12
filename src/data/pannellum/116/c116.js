@@ -17,39 +17,35 @@ const c116 = {
   "one": {
     "sceneId": "one",
     "title": name_cab,
-    // "pitch": 50,
-    // "yaw": 98,
+    "pitch": -10,
+    "yaw": 0,
     "type": "equirectangular",
     "image": c116_1,
-    "compass":"",
+    "compass": "",
     "hotSpots": [
-        {
-          "pitch": -2,
-          "yaw": 54,
-          "type": "custom",
-          "text": "",
-          "sceneId": "two",
-        },
-
-        
-        
-        
-      ]
-},
-"two": {
-  // "compass": true,
-  "sceneId": "two",
-  "title": name_cab,
-  "pitch": -11,
-  "yaw": 90,
-  "type": "equirectangular",
-  "image": c116_2, 
-  "hotSpots": [
+      {
+        "pitch": -2,
+        "yaw": 54,
+        "type": "custom",
+        "text": "",
+        "sceneId": "two",
+      },
+    ]
+  },
+  "two": {
+    // "compass": true,
+    "sceneId": "two",
+    "title": name_cab,
+    "pitch": -11,
+    "yaw": 90,
+    "type": "equirectangular",
+    "image": c116_2,
+    "hotSpots": [
       {
         "pitch": -3,
         "yaw": -49,
         "type": "custom",
-      //   "text": "",
+        //   "text": "",
         "sceneId": "one",
       },
       {
@@ -58,7 +54,7 @@ const c116 = {
         "type": "custom",
         "text": "",
         "cssClass": ".pnlm-hotspot.pnlm-info info",
-        "info":(<C116_info1/>)
+        "info": (<C116_info1 />)
       },
       {
         "pitch": -8,
@@ -67,44 +63,44 @@ const c116 = {
         "text": "",
         "sceneId": "three",
       },
-      
-      
+
+
     ]
-},
-"three": {
+  },
+  "three": {
     // "compass": true,
     "sceneId": "two",
     "title": name_cab,
     "pitch": -11,
     "yaw": 90,
     "type": "equirectangular",
-    "image": c116_3, 
+    "image": c116_3,
     "hotSpots": [
-        {
-          "pitch": -4,
-          "yaw": -78,
-          "type": "custom",
+      {
+        "pitch": -4,
+        "yaw": -78,
+        "type": "custom",
         //   "text": "",
-          "sceneId": "two",
-        },
-        {
-            "pitch": -1,
-            "yaw": 93,
-            "type": "custom",
-          //   "text": "",
-          "cssClass": ".pnlm-hotspot.pnlm-info info",
-            "info": (<C116_info2/>)
-          },
-        {
-            "pitch": -4,
-            "yaw": 72,
-            "type": "custom",
-          //   "text": "",
-            "sceneId": "four",
-          },
-          
-        
-      ]
+        "sceneId": "two",
+      },
+      {
+        "pitch": -1,
+        "yaw": 93,
+        "type": "custom",
+        //   "text": "",
+        "cssClass": ".pnlm-hotspot.pnlm-info info",
+        "info": (<C116_info2 />)
+      },
+      {
+        "pitch": -4,
+        "yaw": 72,
+        "type": "custom",
+        //   "text": "",
+        "sceneId": "four",
+      },
+
+
+    ]
   },
   "four": {
     // "compass": true,
@@ -113,32 +109,32 @@ const c116 = {
     "pitch": -11,
     "yaw": 90,
     "type": "equirectangular",
-    "image": c116_4, 
+    "image": c116_4,
     "hotSpots": [
-        {
-          "pitch": -16,
-          "yaw": -34,
-          "type": "custom",
+      {
+        "pitch": -16,
+        "yaw": -34,
+        "type": "custom",
         //   "text": "",
-          "sceneId": "three",
-        },
-        {
-            "pitch": -28,
-            "yaw": 1,
-            "type": "custom",
-          //   "text": "",
-          "cssClass": ".pnlm-hotspot.pnlm-info info",
-            "info": (<C116_info3/>)
-          },
-        {
-            "pitch": -18,
-            "yaw": 35,
-            "type": "custom",
-          //   "text": "",
-            "sceneId": "five",
-          },
-        
-      ]
+        "sceneId": "three",
+      },
+      {
+        "pitch": -28,
+        "yaw": 1,
+        "type": "custom",
+        //   "text": "",
+        "cssClass": ".pnlm-hotspot.pnlm-info info",
+        "info": (<C116_info3 />)
+      },
+      {
+        "pitch": -18,
+        "yaw": 35,
+        "type": "custom",
+        //   "text": "",
+        "sceneId": "five",
+      },
+
+    ]
   },
   "five": {
     // "compass": true,
@@ -147,24 +143,24 @@ const c116 = {
     "pitch": -11,
     "yaw": 90,
     "type": "equirectangular",
-    "image": c116_5, 
+    "image": c116_5,
     "hotSpots": [
-        {
-          "pitch": -23,
-          "yaw": 91,
-          "type": "custom",
+      {
+        "pitch": -23,
+        "yaw": 91,
+        "type": "custom",
         //   "text": "",
-          "sceneId": "one",
-        },
-        {
-            "pitch": -18,
-            "yaw": -73,
-            "type": "custom",
-          //   "text": "",
-            "sceneId": "four",
-          },
-        
-      ]
+        "sceneId": "one",
+      },
+      {
+        "pitch": -18,
+        "yaw": -73,
+        "type": "custom",
+        //   "text": "",
+        "sceneId": "four",
+      },
+
+    ]
   },
 }
 

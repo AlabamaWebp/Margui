@@ -10,8 +10,8 @@ const c208 = {
     "one": {
         "sceneId": "one",
         "title": name_cab,
-        "pitch": 50,
-        "yaw": 98,
+        "pitch": -4,
+        "yaw": 0,
         "type": "equirectangular",
         "image": c208_1,
         "compass":"",

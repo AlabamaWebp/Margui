@@ -17,7 +17,7 @@ const Header = (
             items: cabs1,
             text: value1,
             change: (value) => {
-                setValue1(value);
+                setValue1(value[0]);
                 setСabinet(value);
             }
         },

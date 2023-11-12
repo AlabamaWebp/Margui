@@ -2,40 +2,44 @@ import React, { useState } from 'react';
 import Header1 from './components/header/header';
 import Panelm from "./components/pannellum-all";
 import cabs1 from './data/header/cabs';
-import Museum_data from './data/pannellum/museum';
-import c114 from './data/pannellum/114/c114';
-import c116 from './data/pannellum/116/c116';
-import c217 from './data/pannellum/217/c217';
-import c204 from './data/pannellum/204/c204';
-import c208 from './data/pannellum/208/c208';
 // import { getConfig } from 'react-pannellum';
 
 function App() {
   // const [floor, setFloor] = useState();
   const [cabinet, setСabinet] = useState(0);
-  const [data, setData] = useState(c208);
+  const [data, setData] = useState(cabs1[0][1]);
   function updateCabinet(value) {
     setСabinet(value);
-    switch (value) {
-      case cabs1[0]:
-        setData(c217);
-        break;
-      case cabs1[1]:
-        setData(c114);
-        break;
-      case cabs1[2]:
-        setData(c208);
-        break;
-      case cabs1[3]:
-        setData(c116);
-        break;
-      case cabs1[4]:
-        setData(c204);
-        break;
-      default:
-        setData(c114);
-        break;
-    }
+    cabs1.forEach(element => {
+      if (element[0] == value[0]) {
+        setData(value[1]);
+        return;
+      }
+    });
+    // switch (value[0]) {
+    //   case cabs1[0][0]:
+    //     setData(value[1]);
+    //     break;
+    //   case cabs1[1][0]:
+    //     setData(value[1]);
+    //     break;
+    //   case cabs1[2][0]:
+    //     setData(value[1]);
+    //     break;
+    //   case cabs1[3][0]:
+    //     setData(value[1]);
+    //     break;
+    //   case cabs1[4][0]:
+    //     setData(value[1]);
+    //     break;
+    //   case cabs1[5][0]:
+    //     setData(value[1]);
+    //     break;
+    //   default:
+    //     // setData(c114);
+    //     console.log(1);
+    //     break;
+    // }
   }
   // function click() {
   //   console.log(getConfig());
@@ -43,14 +47,14 @@ function App() {
   return (
     <>
       <div className="wrapper">
-        <Header1 
+        <Header1
           // floor = {floor}
           // setFloor = {setFloor}
-          cabinet = {cabinet}
-          setСabinet = {updateCabinet}
-          // onClick={() => click}
+          cabinet={cabinet}
+          setСabinet={updateCabinet}
+        // onClick={() => click}
         ></Header1>
-        <Panelm data={data}/>
+        <Panelm data={data} />
         {/* <Routes>
           <Route path='/museum' element={<Museum />} />
           <Route path='/classroom_1' element={<Classroom_1 />} />

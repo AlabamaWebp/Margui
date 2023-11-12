@@ -1,5 +1,6 @@
 import { Pannellum } from "pannellum-react";
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import info_icon from "../assets/images/icons/info.svg"
 
 export default class Panlm extends Component {
     constructor(props) {
@@ -7,9 +8,11 @@ export default class Panlm extends Component {
         this.state = {
             current_data: [],
             info: {},
-            is_info: false
+            is_info: false,
+            info_bottom: false
         };
-        this.closeModal1 = this.closeModal1.bind(this)
+        this.closeModal = this.closeModal.bind(this);
+        this.toggleInfoBottom = this.toggleInfoBottom.bind(this);
     }
     main = this.props.data; // main[Object.keys(main)[0]]
     hfov = 120;
@@ -26,11 +29,15 @@ export default class Panlm extends Component {
         this.state.is_info = true;
         this.updateState();
     }
-    closeModal1(ev) {
+    closeModal(ev) {
         if (ev.target.className.includes("backdrop")) {
             this.state.is_info = false;
             this.updateState();
         }
+    }
+    toggleInfoBottom() {
+        this.state.info_bottom = !this.state.info_bottom;
+        this.updateState()
     }
     updateState() {
         this.setState((state) => state)
@@ -59,7 +66,7 @@ export default class Panlm extends Component {
             <>
                 <div className="pannellum_wrapper">
                     <Pannellum
-                        hotspotDebug
+                        // hotspotDebug
                         autoLoad
 
                         title={this.state.current_data.title}
@@ -85,14 +92,28 @@ export default class Panlm extends Component {
 
                     </Pannellum>
                     {this.state.is_info ?
-                        <div className="backdrop" onClick={this.closeModal1}>
+                        <div className="backdrop" onClick={this.closeModal}>
                             {this.state.info}
                         </div>
-                        : <></>}
+                        :
+                        <></>
+                    }
                     <div className="infoBottom">
-                        <h2>Информация</h2>
-                        <p>Информация</p>
+                        {this.state.info_bottom ?
+                            <div>
+                                <h2>Информация</h2>
+                                <p>Информация</p>
+                                <button onClick={this.toggleInfoBottom}>Закрыть</button>
+                            </div>
+                            :
+                            <>
+                                <div class="icon_info"  onClick={this.toggleInfoBottom}>
+                                    <img src={info_icon}></img>
+                                </div>
+                            </>
+                        }
                     </div>
+
                 </div>
 
             </>

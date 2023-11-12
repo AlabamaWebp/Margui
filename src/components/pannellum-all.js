@@ -1,6 +1,7 @@
 import { Pannellum } from "pannellum-react";
 import React, { Component } from 'react';
 import info_icon from "../assets/images/icons/info.svg"
+import close_icon from "../assets/images/icons/close.svg"
 
 export default class Panlm extends Component {
     constructor(props) {
@@ -44,15 +45,15 @@ export default class Panlm extends Component {
     }
 
     //// ВАЖНО
-    componentDidUpdate(prevProps, prevState){
+    componentDidUpdate(prevProps, prevState) {
         if (this.props.data !== prevProps.data) {
             // ваш код с вызовом setState
             this.updateData()
-          }
+        }
     }
     componentDidMount() {
         // setTimeout(() => {
-            this.updateData()
+        this.updateData()
         // }, 1);
     }
     updateData() {
@@ -100,14 +101,18 @@ export default class Panlm extends Component {
                     }
                     <div className="infoBottom">
                         {this.state.info_bottom ?
-                            <div>
-                                <h2>Информация</h2>
-                                <p>Информация</p>
-                                <button onClick={this.toggleInfoBottom}>Закрыть</button>
+                            <div className="info">
+                                <div className="flex headerIB">
+                                    <h3>{this.state.current_data.infoBottomHeader}</h3>
+                                    <div className="icon_info close" onClick={this.toggleInfoBottom}>
+                                        <img src={close_icon}></img>
+                                    </div>
+                                </div>
+                                {this.state.current_data.infoBottom}
                             </div>
                             :
                             <>
-                                <div class="icon_info"  onClick={this.toggleInfoBottom}>
+                                <div className="icon_info" onClick={this.toggleInfoBottom}>
                                     <img src={info_icon}></img>
                                 </div>
                             </>

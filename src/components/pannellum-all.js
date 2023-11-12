@@ -35,11 +35,23 @@ export default class Panlm extends Component {
     updateState() {
         this.setState((state) => state)
     }
+
+    //// ВАЖНО
+    componentDidUpdate(prevProps, prevState){
+        if (this.props.data !== prevProps.data) {
+            // ваш код с вызовом setState
+            this.updateData()
+          }
+    }
     componentDidMount() {
         // setTimeout(() => {
-            this.state.current_data = this.props.data[Object.keys(this.main)[0]];
-            this.updateState()
+            this.updateData()
         // }, 1);
+    }
+    updateData() {
+        this.main = this.props.data;
+        this.state.current_data = this.props.data[Object.keys(this.main)[0]];
+        this.updateState()
     }
 
     render() {

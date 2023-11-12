@@ -16,43 +16,13 @@ function App() {
         return;
       }
     });
-    // switch (value[0]) {
-    //   case cabs1[0][0]:
-    //     setData(value[1]);
-    //     break;
-    //   case cabs1[1][0]:
-    //     setData(value[1]);
-    //     break;
-    //   case cabs1[2][0]:
-    //     setData(value[1]);
-    //     break;
-    //   case cabs1[3][0]:
-    //     setData(value[1]);
-    //     break;
-    //   case cabs1[4][0]:
-    //     setData(value[1]);
-    //     break;
-    //   case cabs1[5][0]:
-    //     setData(value[1]);
-    //     break;
-    //   default:
-    //     // setData(c114);
-    //     console.log(1);
-    //     break;
-    // }
   }
-  // function click() {
-  //   console.log(getConfig());
-  // }
   return (
     <>
       <div className="wrapper">
         <Header1
-          // floor = {floor}
-          // setFloor = {setFloor}
           cabinet={cabinet}
           setСabinet={updateCabinet}
-        // onClick={() => click}
         ></Header1>
         <Panelm data={data} />
         {/* <Routes>

@@ -1,5 +1,6 @@
 import { Pannellum } from "pannellum-react";
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import info_icon from "../assets/images/icons/info.svg"
 
 export default class Panlm extends Component {
     constructor(props) {
@@ -53,7 +54,7 @@ export default class Panlm extends Component {
             <>
                 <div className="pannellum_wrapper">
                     <Pannellum
-                        hotspotDebug
+                        // hotspotDebug
                         autoLoad
 
                         title={this.state.current_data.title}
@@ -94,7 +95,9 @@ export default class Panlm extends Component {
                             </div>
                             :
                             <>
-                                <button onClick={this.toggleInfoBottom}>Иконка</button>
+                                <div class="icon_info"  onClick={this.toggleInfoBottom}>
+                                    <img src={info_icon}></img>
+                                </div>
                             </>
                         }
                     </div>

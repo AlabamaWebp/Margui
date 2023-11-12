@@ -45,7 +45,6 @@ const data = {
         "pitch": -30,
         "yaw": -110,
         "type": "custom",
-        // "text": "",
         "sceneId": "musei2",
       },
     ]

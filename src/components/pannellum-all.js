@@ -86,7 +86,7 @@ export default class Panlm extends Component {
                                 type={hotspot.type ? hotspot.type : undefined}
                                 targetYaw={hotspot.targetYaw ? hotspot.targetYaw : undefined}
                                 text={hotspot.text ? hotspot.text : undefined}
-                                cssClass={hotspot.cssClass ? hotspot.cssClass : undefined}
+                                cssClass={hotspot.cssClass ? hotspot.cssClass + " hotspotCustom" : "hotspotCustom"}
                                 handleClick={() => hotspot.info ? this.showInfo(hotspot.info) : this.changeScene(hotspot.sceneId, hotspot.targetYaw)}
                             />
                         )) : undefined}

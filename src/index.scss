@@ -151,3 +151,16 @@ body,
 .flex {
   display: flex;
 }
+.hotspotCustom {
+  $in: 20px;
+  $out: 40px;
+  .in {
+    height: $in !important;width: $in !important;
+  }
+  .out {
+    width: $out !important;height: $out !important;
+  }
+//   &:hover {
+
+//   }
+}

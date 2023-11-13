@@ -39,19 +39,19 @@ const c217 = {
           "info": (<C217_info2/>)
         },
         {
-          "pitch": 2,
+          "pitch": 3,
           "yaw": -10,
           "type": "custom",
           "info": (<C217_info1/>)
         },
         {
-          "pitch": 2,
+          "pitch": 4,
           "yaw": -37,
           "type": "custom",
           "info": (<C217_info1/>)
         },
         {
-          "pitch": 2,
+          "pitch":5,
           "yaw": -61,
           "type": "custom",
           "info": (<C217_info1/>)
@@ -59,19 +59,19 @@ const c217 = {
         
 
         {
-          "pitch": 5,
+          "pitch": 6,
           "yaw": -70,
           "type": "custom",
           "info": (<C217_info1/>)
         },
         {
-          "pitch": 5,
+          "pitch": 7,
           "yaw": -82,
           "type": "custom",
           "info": (<C217_info1/>)
         },
         {
-          "pitch": 5,
+          "pitch": 8,
           "yaw": -116,
           "type": "custom",
           "info": (<C217_info1/>)

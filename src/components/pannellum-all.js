@@ -13,7 +13,8 @@ export default class Panlm extends Component {
             info_bottom: false
         };
         this.closeModal = this.closeModal.bind(this);
-        this.toggleInfoBottom = this.toggleInfoBottom.bind(this);
+        this.closeInfoBottom = this.closeInfoBottom.bind(this);
+        this.openInfoBottom = this.openInfoBottom.bind(this);
     }
     main = this.props.data; // main[Object.keys(main)[0]]
     hfov = 120;
@@ -36,9 +37,16 @@ export default class Panlm extends Component {
             this.updateState();
         }
     }
-    toggleInfoBottom() {
-        this.state.info_bottom = !this.state.info_bottom;
-        this.updateState()
+
+    closeInfoBottom(ev, auto=false) {
+        if (auto || this.state.info_bottom == true && !this.findClassName(ev.target, "infoBottom")) {
+            this.state.info_bottom = false;
+            this.updateState();
+        }
+    }
+    openInfoBottom() {
+        this.state.info_bottom = true;
+        this.updateState();
     }
     updateState() {
         this.setState((state) => state)
@@ -61,11 +69,21 @@ export default class Panlm extends Component {
         this.state.current_data = this.main[Object.keys(this.main)[0]];
         this.updateState()
     }
+    findClassName(target, className) {
+        if (target.className != className) {
+            if (target.parentElement)
+                return this.findClassName(target.parentElement, className);
+            else return false;
+        }
+        else {
+            return true;
+        }
+    }
 
     render() {
         return (
             <>
-                <div className="pannellum_wrapper">
+                <div className="pannellum_wrapper" onClick={this.closeInfoBottom}>
                     <Pannellum
                         // hotspotDebug
                         autoLoad
@@ -104,7 +122,7 @@ export default class Panlm extends Component {
                             <div className="info">
                                 <div className="flex headerIB">
                                     <h3>{this.state.current_data.infoBottomHeader}</h3>
-                                    <div className="icon_info close" onClick={this.toggleInfoBottom}>
+                                    <div className="icon_info close" onClick={() => this.closeInfoBottom(0, true)}>
                                         <img src={close_icon}></img>
                                     </div>
                                 </div>
@@ -112,7 +130,7 @@ export default class Panlm extends Component {
                             </div>
                             :
                             <>
-                                <div className="icon_info" onClick={this.toggleInfoBottom}>
+                                <div className="icon_info" onClick={this.openInfoBottom}>
                                     <img src={info_icon}></img>
                                 </div>
                             </>

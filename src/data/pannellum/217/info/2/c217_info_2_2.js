@@ -1,38 +1,23 @@
 import React from 'react'
 import i217_21 from '../../../../../assets/images/217/stands/2.jpg'
-import i217_23 from "../../../../../assets/images/217/stands/3.jpg"
-import i217_22 from "../../../../../assets/images/217/stands/4.jpg"
-// @import "../../../../index.scss";
+import i217_22 from "../../../../../assets/images/217/stands/3.jpg"
+import i217_23 from "../../../../../assets/images/217/stands/4.jpg"
 
+export default function c217_info2() {
+return (
+<div className='modalPnlm'>
+<div className='container'>
+<div className='left'>
+<img className='stand_image' src={i217_21} width={"100%"} />
+<img className='stand_image' src={i217_22} width={"100%"} />
+<img className='stand_image' src={i217_23} width={"100%"} />
+</div>
+<div className='right'>
+<h2>История развития популяционно-онтогенетического направления в России и его перспективы</h2>
+<p>В 1990-х годах на кафедру приезжали читать лекции и на базе музея проводить семинары московские ученые д-р биол. наук, проф. О. В. Смирнова, д-р биол. наук, проф. Л. Б. Заугольнова, д-р биол. наук, проф. А. С. Комаров, д-р биол. наук, проф. Л. А. Животовский, специалисты из Санкт-Петербурга – д-р биол. наук, проф. Н. В. Глотов, из Новосибирска – В. А. Черемушкина, из Твери – академик РАЕН, д-р биол. наук, проф. М. В. Марков. В настоящее время налажены связи с 18 научными центрами России, а популяционно-онтогенетическое направление, насчитывающее сотни последователей Т.А. Работнова и А.А. Уранова, продолжает интенсивно расширяться. </p>
+</div>
+</div>
+</div>
+)
 
-export default function c217_info_2_2() {
-
-    // const [name_stand, setData] = useState();
-
-    const name_stand = 'Стенд';
-
-    const contain = {
-        display: 'flex',
-        flexDirection: 'column',
-        margin: '3px',
-        boxShadow: '1px 2px 9px black',
-    }
-    const img = {
-        maxheight: '130px',
-        // maxwight: 'auto'
-    }
-
-  return (
-    <div className='modalPnlm' style={contain}>
-        <h2>Стенд</h2>
-        <div className='container' style={contain}>
-            <img className='moreimage' style={img} src={i217_21} />
-            <img className='moreimage' style={img} src={i217_22} />
-            <img className='moreimage' style={img} src={i217_23} />
-            <p>Информация о стенде</p>
-            
-        </div>
-      
-    </div>
-  )
 }

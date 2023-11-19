@@ -120,6 +120,9 @@
         overflow: auto;
         width: 100%;
         // flex-direction: column;
+        &.book {
+            flex-direction: column;
+        }
         &.only_image {
             height: 100%;
         }

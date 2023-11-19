@@ -6,7 +6,7 @@ import i217_3 from "../../../../../assets/images/217/stands/IMG_20231109_151641.
 export default function c217_info_1_6() {
   return (
     <div className='modalPnlm'>
-      <div className='container only_image'>
+      <div className='container only_image book'>
         <img className='only_image' src={i217_1} width={"100%"} />
         <img className='only_image' src={i217_2} width={"100%"} />
         <img className='only_image' src={i217_3} width={"100%"} />

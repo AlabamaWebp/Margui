@@ -29,6 +29,9 @@ function App() {
         }
       });
     }
+    else {
+      window.history.pushState(null, null,cabs1[0][2])
+    }
 
   }, []);
   return (

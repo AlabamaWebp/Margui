@@ -4,6 +4,7 @@ import c217_2 from "../../../assets/images/217/с217_2.jpg"
 // import c217_s1 from "../../assets/images/217/stands/1.jpg"
 import C217_info1 from "./info/c217_info1";
 import C217_info2 from "./info/c217_info2";
+import C217_info3 from "./info/С217_info3";
 import Infob1 from "./infoBottom/infob1";
 
 
@@ -123,7 +124,7 @@ const c217 = {
         "pitch": 2,
         "yaw": 62,
         "type": "custom",
-        "info": (<C217_info1 />)
+        "info": (<C217_info3 />)
       },
       {
         "pitch": 5.5,

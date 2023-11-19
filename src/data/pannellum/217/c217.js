@@ -94,7 +94,7 @@ const c217 = {
         "type": "custom",
         //   "text": "",
         "sceneId": "one",
-      },
+      },  // perehod
       {
         "pitch": 2,
         "yaw": 92,
@@ -102,6 +102,21 @@ const c217 = {
         "info": (<C217_info1 />)
         // "text": "Стенд1",
       },
+      {
+        "pitch": 2,
+        "yaw": 77,
+        "type": "custom",
+        "info": (<C217_info2 />)
+        // "text": "Стенд2",
+      },
+      {
+        "pitch": 2,
+        "yaw": 62,
+        "type": "custom",
+        "info": (<C217_info3 />)
+        // "text": "Стенд3",
+      },
+      
       {
         "pitch": 9,
         "yaw": -8,
@@ -113,18 +128,6 @@ const c217 = {
         "yaw": -26,
         "type": "custom",
         "info": (<C217_info2 />)
-      },
-      {
-        "pitch": 2,
-        "yaw": 77,
-        "type": "custom",
-        "info": (<C217_info2 />)
-      },
-      {
-        "pitch": 2,
-        "yaw": 62,
-        "type": "custom",
-        "info": (<C217_info3 />)
       },
       {
         "pitch": 5.5,

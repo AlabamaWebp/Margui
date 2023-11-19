@@ -1,10 +1,10 @@
-import React, { useState, Navigate } from 'react';
+import React, { useState } from 'react';
 import Header1 from './components/header/header';
 import Panelm from "./components/pannellum-all";
 import cabs1 from './data/header/cabs';
 
 function App() {
-  const [cabinet, setСabinet] = useState(0);
+  const [cabinet, setСabinet] = useState("");
   const [data, setData] = useState(cabs1[0][1]);
   function updateCabinet(value) {
     setСabinet(value);
@@ -24,6 +24,7 @@ function App() {
       cabs1.forEach(element => {
         if (element[2] == currentUrl) {
           setData(element[1]);
+          setСabinet(element[0]);
           return;
         }
       });

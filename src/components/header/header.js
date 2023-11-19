@@ -1,5 +1,5 @@
 
-import { React, useState } from 'react';
+import React, { useState } from 'react';
 import HoverContainer from '../hover-container/hoverContainer';
 import cabs1 from '../../data/header/cabs';
 
@@ -10,7 +10,7 @@ const Header = (
         cabinet,
         setСabinet, }
 ) => {
-    const [value1, setValue1] = useState("217 каб.");
+    const [value1, setValue1] = useState(cabinet);
     let hover = [
         {
             name: "Кабинет",
@@ -21,7 +21,15 @@ const Header = (
                 setСabinet(value);
             }
         },
-    ]
+    ];
+    React.useEffect(() => {
+        if (hover[0].text == "") {
+            setValue1(cabinet);
+        }
+        // return () => {
+        //     setValue1(cabinet)
+        // };
+    });
     return (
         <header className='mainHeader'>
             {hover.map((item, index) =>

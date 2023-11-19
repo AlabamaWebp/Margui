@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Navigate } from 'react';
 import Header1 from './components/header/header';
 import Panelm from "./components/pannellum-all";
 import cabs1 from './data/header/cabs';
@@ -11,10 +11,25 @@ function App() {
     cabs1.forEach(element => {
       if (element[0] == value[0]) {
         setData(value[1]);
+        window.history.pushState(null, null,value[2])
         return;
       }
     });
   }
+
+  React.useEffect(() => {
+    let currentUrl = window.location.href.split("/");
+    currentUrl = currentUrl[currentUrl.length-1]
+    if (currentUrl != "") {
+      cabs1.forEach(element => {
+        if (element[2] == currentUrl) {
+          setData(element[1]);
+          return;
+        }
+      });
+    }
+
+  }, []);
   return (
     <>
       <div className="wrapper">

@@ -116,7 +116,14 @@ const c217 = {
         "info": (<C217_info3 />)
         // "text": "Стенд3",
       },
-      
+      {
+        "pitch": 1.3,
+        "yaw": 125.7,
+        "type": "custom",
+        "info": (<C217_info1 />)
+        // "text": "структура",
+      },
+
       {
         "pitch": 9,
         "yaw": -8,
@@ -132,12 +139,6 @@ const c217 = {
       {
         "pitch": 5.5,
         "yaw": -101,
-        "type": "custom",
-        "info": (<C217_info1 />)
-      },
-      {
-        "pitch": 1.3,
-        "yaw": 125.7,
         "type": "custom",
         "info": (<C217_info1 />)
       },

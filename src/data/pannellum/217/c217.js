@@ -22,119 +22,123 @@ const c217 = {
     "image": c217_1,
     // "compass":"",
     "infoBottomHeader": "Онтогенетический музей",
-    "infoBottom": (<Infob1/>),
+    "infoBottom": (<Infob1 />),
     "hotSpots": [
-        {
-          "pitch": -17,
-          "yaw": 168,
-          "type": "custom",
-          "text": "",
-          "sceneId": "two",
-        },
-        {
-          "pitch": 2,
-          "yaw": 29,
-          "type": "custom",
-          "cssClass": "info",
-          "info": (<C217_info2/>)
-        },
-        {
-          "pitch": 3,
-          "yaw": -10,
-          "type": "custom",
-          "info": (<C217_info1/>)
-        },
-        {
-          "pitch": 4,
-          "yaw": -37,
-          "type": "custom",
-          "info": (<C217_info1/>)
-        },
-        {
-          "pitch":5,
-          "yaw": -61,
-          "type": "custom",
-          "info": (<C217_info1/>)
-        },
-        
-
-        {
-          "pitch": 6,
-          "yaw": -70,
-          "type": "custom",
-          "info": (<C217_info1/>)
-        },
-        {
-          "pitch": 7,
-          "yaw": -82,
-          "type": "custom",
-          "info": (<C217_info1/>)
-        },
-        {
-          "pitch": 8,
-          "yaw": -116,
-          "type": "custom",
-          "info": (<C217_info1/>)
-        }
-      ]
-},
-"two": {
-  // "compass": true,
-  "sceneId": "two",
-  "title": name_cab,
-  "pitch": -11,
-  "yaw": 90,
-  "type": "equirectangular",
-  "image": c217_2, 
-  "infoBottom": (<Infob1/>),
-  "infoBottomHeader": "Онтогенетический музей",
-  "hotSpots": [
+      {
+        "pitch": -17,
+        "yaw": 168,
+        "type": "custom",
+        "text": "",
+        "sceneId": "two",
+      },
+      {
+        "pitch": 9.4,
+        "yaw": 27.9,
+        "type": "custom",
+        "cssClass": "info",
+        "info": (<C217_info2 />)
+      },
+      {
+        "pitch": 11.9,
+        "yaw": -9.7,
+        "type": "custom",
+        "info": (<C217_info1 />)
+      },
+      {
+        "pitch": 11.5,
+        "yaw": -41.3,
+        "type": "custom",
+        "info": (<C217_info1 />)
+      },
+      {
+        "pitch": 10,
+        "yaw": -59.6,
+        "type": "custom",
+        "info": (<C217_info1 />)
+      },
+      {
+        "pitch": 9.2,
+        "yaw": -69.6,
+        "type": "custom",
+        "info": (<C217_info1 />)
+      },
+      {
+        "pitch": 9,
+        "yaw": -81.5,
+        "type": "custom",
+        "info": (<C217_info1 />)
+      },
+      {
+        "pitch": 8.5,
+        "yaw": -100,
+        "type": "custom",
+        "info": (<C217_info1 />)
+      }
+    ]
+  },
+  "two": {
+    // "compass": true,
+    "sceneId": "two",
+    "title": name_cab,
+    "pitch": -11,
+    "yaw": 90,
+    "type": "equirectangular",
+    "image": c217_2,
+    "infoBottom": (<Infob1 />),
+    "infoBottomHeader": "Онтогенетический музей",
+    "hotSpots": [
       {
         "pitch": -17,
         "yaw": -176,
         "type": "custom",
-      //   "text": "",
+        //   "text": "",
         "sceneId": "one",
       },
       {
-          "pitch": 2,
-          "yaw": 92,
-          "type": "custom",
-          "info": (<C217_info1/>)
-          // "text": "Стенд1",
-        },
-        {
-          "pitch": 2,
-            "yaw": -15,
-            "type": "custom",
-            "info": (<C217_info2/>)
-        },
-        {
-          "pitch": 2,
-            "yaw": 76,
-            "type": "custom",
-            "info": (<C217_info2/>)
-        },
-        {
-          "pitch": 2,
-            "yaw": 64,
-            "type": "custom",
-            "info": (<C217_info1/>)
-        },
-        {
-          "pitch": 2,
-            "yaw": 59,
-            "type": "custom",
-            "info": (<C217_info1/>)
-        },
-        {
-          "pitch": 2,
-            "yaw": -100,
-            "type": "custom",
-            "info": (<C217_info1/>)
-        },
+        "pitch": 2,
+        "yaw": 92,
+        "type": "custom",
+        "info": (<C217_info1 />)
+        // "text": "Стенд1",
+      },
+      {
+        "pitch": 9,
+        "yaw": -8,
+        "type": "custom",
+        "info": (<C217_info2 />)
+      },
+      {
+        "pitch": 9,
+        "yaw": -26,
+        "type": "custom",
+        "info": (<C217_info2 />)
+      },
+      {
+        "pitch": 2,
+        "yaw": 77,
+        "type": "custom",
+        "info": (<C217_info2 />)
+      },
+      {
+        "pitch": 2,
+        "yaw": 62,
+        "type": "custom",
+        "info": (<C217_info1 />)
+      },
+      {
+        "pitch": 5.5,
+        "yaw": -101,
+        "type": "custom",
+        "info": (<C217_info1 />)
+      },
+      {
+        "pitch": 1.3,
+        "yaw": 125.7,
+        "type": "custom",
+        "info": (<C217_info1 />)
+      }
     ]
-},
+  },
 }
 
 export default c217;

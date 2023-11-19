@@ -1,11 +1,11 @@
 import React from 'react'
-import i217_21 from '../../../../assets/images/217/stands/2.jpg'
-import i217_23 from "../../../../assets/images/217/stands/3.jpg"
-import i217_22 from "../../../../assets/images/217/stands/4.jpg"
+import i217_21 from '../../../../../assets/images/217/stands/2.jpg'
+import i217_23 from "../../../../../assets/images/217/stands/3.jpg"
+import i217_22 from "../../../../../assets/images/217/stands/4.jpg"
 // @import "../../../../index.scss";
 
 
-export default function c217_info2() {
+export default function c217_info_2_2() {
 
     // const [name_stand, setData] = useState();
 

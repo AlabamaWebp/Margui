@@ -1,7 +1,7 @@
 import React from 'react'
-import i217_1 from "../../../../assets/images/217/stands/1.jpg"
+import i217_1 from "../../../../../assets/images/217/stands/1.jpg"
 
-export default function c217_info1() {
+export default function c217_info_2_1() {
   const imgstyle = {
     width: "300px",
     height: "500px"

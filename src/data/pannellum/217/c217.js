@@ -70,7 +70,7 @@ const c217 = {
       },
       {
         "pitch": 8.5,
-        "yaw": -100,
+        "yaw": -100.8,
         "type": "custom",
         "info": (<C217_info1 />)
       }
@@ -136,7 +136,7 @@ const c217 = {
         "yaw": 125.7,
         "type": "custom",
         "info": (<C217_info1 />)
-      }
+      },
     ]
   },
 }

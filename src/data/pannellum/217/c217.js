@@ -15,8 +15,8 @@ const c217 = {
   "one": {
     "sceneId": "one",
     "title": name_cab,
-    "pitch": 50,
-    "yaw": 98,
+    "pitch": -4,
+    "yaw": 177,
     "type": "equirectangular",
     "image": c217_1,
     "compass":"",

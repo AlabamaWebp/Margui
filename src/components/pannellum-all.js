@@ -1,5 +1,6 @@
 import { Pannellum } from "pannellum-react";
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import info_icon from "../assets/images/icons/info.svg"
 
 export default class Panlm extends Component {
     constructor(props) {
@@ -41,11 +42,23 @@ export default class Panlm extends Component {
     updateState() {
         this.setState((state) => state)
     }
+
+    //// ВАЖНО
+    componentDidUpdate(prevProps, prevState){
+        if (this.props.data !== prevProps.data) {
+            // ваш код с вызовом setState
+            this.updateData()
+          }
+    }
     componentDidMount() {
         // setTimeout(() => {
+            this.updateData()
+        // }, 1);
+    }
+    updateData() {
+        this.main = this.props.data;
         this.state.current_data = this.props.data[Object.keys(this.main)[0]];
         this.updateState()
-        // }, 1);
     }
 
     render() {
@@ -53,7 +66,7 @@ export default class Panlm extends Component {
             <>
                 <div className="pannellum_wrapper">
                     <Pannellum
-                        hotspotDebug
+                        // hotspotDebug
                         autoLoad
 
                         title={this.state.current_data.title}
@@ -94,7 +107,9 @@ export default class Panlm extends Component {
                             </div>
                             :
                             <>
-                                <button onClick={this.toggleInfoBottom}>Иконка</button>
+                                <div class="icon_info"  onClick={this.toggleInfoBottom}>
+                                    <img src={info_icon}></img>
+                                </div>
                             </>
                         }
                     </div>

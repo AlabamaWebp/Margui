@@ -16,8 +16,6 @@ export default function c217_info2() {
         flexDirection: 'column',
         margin: '3px',
         boxShadow: '1px 2px 9px black',
-        
-         
     }
     const img = {
         maxheight: '130px',
@@ -27,7 +25,6 @@ export default function c217_info2() {
   return (
     <div className='modalPnlm' style={contain}>
         <h2>Стенд</h2>
-        {/* <h2>{name_stand}</h2> */}
         <div className='container' style={contain}>
             <img className='moreimage' style={img} src={i217_21} />
             <img className='moreimage' style={img} src={i217_22} />

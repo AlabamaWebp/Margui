@@ -1,5 +1,6 @@
 @import "./components/header/header.scss";
 @import "./components/hover-container/hoverContainer.scss";
+@import "./components/pannellum-all.scss";
 
 body {
   margin: 0;
@@ -10,7 +11,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
 }
-
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 5px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -70,60 +73,6 @@ body,
   z-index: 3;
 }
 
-.modalPnlm {
+.flex {
   display: flex;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.75);
-  color: white;
-  border-radius: 5px;
-  max-height: 90%;
-  max-width: 90%;
-
-  img {
-    // max-height: 100%;
-    max-width: 45%;
-    float: left;
-  }
-
-  // .mimages {
-  //   max-height: 100%;
-  //   max-width: 50%;
-  // }
-  .mtext {
-    width: 100%;
-    padding: 0 0 0 15px;
-    overflow: auto;
-  }
-
-  // .mimages {
-
-  // }
-  // .mtext {
-
-  // }
-}
-
-.infoBottom {
-  position: absolute;
-  // bottom: 50%;
-  bottom: 0;
-  left: 50%;
-  height: auto;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border-radius: 5px 5px 0 0;
-  padding: 10px;
-}
-.icon_info {
-  transition: .2s;
-  cursor: pointer;
-  img {
-
-    height: 25px;
-    width: 25px;
-  }
-  &:hover {
-    transform: scale(1.1);
-  }
 }

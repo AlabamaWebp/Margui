@@ -1,6 +1,7 @@
 import { Pannellum } from "pannellum-react";
 import React, { Component } from 'react';
 import info_icon from "../assets/images/icons/info.svg"
+import close_icon from "../assets/images/icons/close.svg"
 
 export default class Panlm extends Component {
     constructor(props) {
@@ -12,7 +13,8 @@ export default class Panlm extends Component {
             info_bottom: false
         };
         this.closeModal = this.closeModal.bind(this);
-        this.toggleInfoBottom = this.toggleInfoBottom.bind(this);
+        this.closeInfoBottom = this.closeInfoBottom.bind(this);
+        this.openInfoBottom = this.openInfoBottom.bind(this);
     }
     main = this.props.data; // main[Object.keys(main)[0]]
     hfov = 120;
@@ -35,38 +37,55 @@ export default class Panlm extends Component {
             this.updateState();
         }
     }
-    toggleInfoBottom() {
-        this.state.info_bottom = !this.state.info_bottom;
-        this.updateState()
+
+    closeInfoBottom(ev, auto=false) {
+        if (auto || this.state.info_bottom == true && !this.findClassName(ev.target, "infoBottom")) {
+            this.state.info_bottom = false;
+            this.updateState();
+        }
+    }
+    openInfoBottom() {
+        this.state.info_bottom = true;
+        this.updateState();
     }
     updateState() {
         this.setState((state) => state)
     }
 
     //// ВАЖНО
-    componentDidUpdate(prevProps, prevState){
+    componentDidUpdate(prevProps, prevState) {
         if (this.props.data !== prevProps.data) {
             // ваш код с вызовом setState
             this.updateData()
-          }
+        }
     }
     componentDidMount() {
         // setTimeout(() => {
-            this.updateData()
+        this.updateData()
         // }, 1);
     }
     updateData() {
         this.main = this.props.data;
-        this.state.current_data = this.props.data[Object.keys(this.main)[0]];
+        this.state.current_data = this.main[Object.keys(this.main)[0]];
         this.updateState()
+    }
+    findClassName(target, className) {
+        if (target.className != className) {
+            if (target.parentElement)
+                return this.findClassName(target.parentElement, className);
+            else return false;
+        }
+        else {
+            return true;
+        }
     }
 
     render() {
         return (
             <>
-                <div className="pannellum_wrapper">
+                <div className="pannellum_wrapper" onClick={this.closeInfoBottom}>
                     <Pannellum
-                        // hotspotDebug
+                        hotspotDebug
                         autoLoad
 
                         title={this.state.current_data.title}
@@ -85,8 +104,9 @@ export default class Panlm extends Component {
                                 type={hotspot.type ? hotspot.type : undefined}
                                 targetYaw={hotspot.targetYaw ? hotspot.targetYaw : undefined}
                                 text={hotspot.text ? hotspot.text : undefined}
-                                cssClass={hotspot.cssClass ? hotspot.cssClass : undefined}
-                                handleClick={() => hotspot.cssClass && hotspot.cssClass.includes("info") ? this.showInfo(hotspot.info) : this.changeScene(hotspot.sceneId, hotspot.targetYaw)}
+                                cssClass={(hotspot.cssClass ? hotspot.cssClass + " hotspotCustom" : "hotspotCustom")
+                                         + (hotspot.info ? " infoHostSpot": "")}
+                                handleClick={() => hotspot.info ? this.showInfo(hotspot.info) : this.changeScene(hotspot.sceneId, hotspot.targetYaw)}
                             />
                         )) : undefined}
 
@@ -100,14 +120,18 @@ export default class Panlm extends Component {
                     }
                     <div className="infoBottom">
                         {this.state.info_bottom ?
-                            <div>
-                                <h2>Информация</h2>
-                                <p>Информация</p>
-                                <button onClick={this.toggleInfoBottom}>Закрыть</button>
+                            <div className="info">
+                                <div className="flex headerIB">
+                                    <h3>{this.state.current_data.infoBottomHeader}</h3>
+                                    <div className="icon_info close" onClick={() => this.closeInfoBottom(0, true)}>
+                                        <img src={close_icon}></img>
+                                    </div>
+                                </div>
+                                {this.state.current_data.infoBottom}
                             </div>
                             :
                             <>
-                                <div class="icon_info"  onClick={this.toggleInfoBottom}>
+                                <div className="icon_info" onClick={this.openInfoBottom}>
                                     <img src={info_icon}></img>
                                 </div>
                             </>

@@ -17,7 +17,7 @@ const Header = (
             items: cabs1,
             text: value1,
             change: (value) => {
-                setValue1(value);
+                setValue1(value[0]);
                 setСabinet(value);
             }
         },
@@ -31,7 +31,6 @@ const Header = (
                         text={item.text}
                         items={item.items}
                         onChange={item.change}
-                    // vars={item}
                     />
                 </div>
             )}
@@ -40,6 +39,7 @@ const Header = (
 }
 export default Header;
 
+//НЕАКТУАЛЬНО
 // export const cab = ["Музей", "204 каб.", "208 каб.", "116 каб.", "114 каб."];
 
 // Пример обьекта hover

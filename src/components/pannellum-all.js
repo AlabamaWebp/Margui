@@ -85,7 +85,7 @@ export default class Panlm extends Component {
             <>
                 <div className="pannellum_wrapper" onClick={this.closeInfoBottom}>
                     <Pannellum
-                        hotspotDebug
+                        // hotspotDebug
                         autoLoad
 
                         title={this.state.current_data.title}

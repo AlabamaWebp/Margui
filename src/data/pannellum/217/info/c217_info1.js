@@ -2,10 +2,6 @@ import React from 'react'
 import i217_1 from "../../../../assets/images/217/stands/1.jpg"
 
 export default function c217_info1() {
-  const imgstyle = {
-    width: "300px",
-    height: "500px"
-  }
   return (
     <div className='modalPnlm'>
       <div className='container'>

@@ -118,7 +118,14 @@
     .container {
         display: flex;
         overflow: auto;
+        width: 100%;
         // flex-direction: column;
+        &.only_image {
+            height: 100%;
+        }
+        .only_image {
+            padding: 0 5px;
+        }
     }
     .left, .right {
         width: 50%;

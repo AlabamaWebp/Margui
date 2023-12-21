@@ -10,6 +10,7 @@ function App() {
     setСabinet(value);
     cabs1.forEach(element => {
       if (element[0] == value[0]) {
+        setСabinet(value[0]);
         setData(value[1]);
         window.history.pushState(null, null,value[2])
         return;
@@ -18,10 +19,12 @@ function App() {
   }
 
   React.useEffect(() => {
-    let currentUrl = window.location.href.split("/");
-    currentUrl = currentUrl[currentUrl.length-1]
-    if (currentUrl != "") {
+    let currentUrl = window.location.href.split("?cab=")[1];
+    // currentUrl = currentUrl[currentUrl.length-1]
+    if (currentUrl) {
+      currentUrl = "?cab=" + currentUrl;
       cabs1.forEach(element => {
+        console.log(currentUrl, element[2]);
         if (element[2] == currentUrl) {
           setData(element[1]);
           setСabinet(element[0]);
@@ -30,7 +33,7 @@ function App() {
       });
     }
     else {
-      window.history.pushState(null, null,cabs1[0][2])
+      window.history.pushState(null, null,  cabs1[0][2])
     }
 
   }, []);

@@ -7,8 +7,6 @@ import c217_2 from "../../../assets/images/217/с217_2.jpg"
 import C217_info_2_1 from "./info/2/c217_info_2_1";
 import C217_info_2_2 from "./info/2/c217_info_2_2";
 import C217_info_2_3 from "./info/2/c217_info_2_3";
-import C217_info_2_4 from "./info/2/c217_info_2_4";
-import C217_info_2_5 from "./info/2/c217_info_2_5";
 import C217_info_2_6 from "./info/2/c217_info_2_6";
 import C217_info_2_7 from "./info/2/c217_info_2_7";
 
@@ -22,6 +20,11 @@ import C217_info_1_4 from "./info/1/c217_info_1_4";
 import C217_info_1_5 from "./info/1/c217_info_1_5";
 import C217_info_1_6 from "./info/1/c217_info_1_6";
 
+
+import One from "../../../components/functions/one_image";
+import i217_5 from "../../../assets/images/217/stands/IMG_20231109_151735.jpg"
+import i217_4 from "../../../assets/images/217/stands/IMG_20231109_151729.jpg"
+import i217_6 from "../../../assets/images/217/stands/IMG_20231109_151705.jpg"
 
 // import c217_info_right from "./info/c217_right";
 // import C217_info2 from "./info/c217_info2";
@@ -136,13 +139,13 @@ const c217 = {
         "pitch": 9,
         "yaw": -8,
         "type": "custom",
-        "info": (<C217_info_2_4 />)
+        "info": (<One image={i217_4} />)
       },
       {
         "pitch": 9,
         "yaw": -26,
         "type": "custom",
-        "info": (<C217_info_2_5 />)
+        "info": (<One image={i217_5} />)
       },
       {
         "pitch": 2,
@@ -160,7 +163,7 @@ const c217 = {
         "pitch": 5.5,
         "yaw": -101,
         "type": "custom",
-        "info": (<C217_info_2_6 />)
+        "info": (<One image={i217_6} />)
       },
       {
         "pitch": 1.3,

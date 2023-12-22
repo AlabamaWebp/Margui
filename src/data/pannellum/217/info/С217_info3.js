@@ -2,6 +2,7 @@ import React from 'react'
 import i217_21 from "../../../../assets/images/217/stands/11.jpg"
 import i217_22 from "../../../../assets/images/217/stands/12.jpg"
 
+
 export default function С217_info() {
   return (
     <div className='modalPnlm'>
